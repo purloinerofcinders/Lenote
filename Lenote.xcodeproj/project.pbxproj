@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99501CA1618200FD12F7 /* AppDelegate.swift */; };
+		BAFF99531CA1618200FD12F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99521CA1618200FD12F7 /* ViewController.swift */; };
+		BAFF99561CA1618200FD12F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFF99541CA1618200FD12F7 /* Main.storyboard */; };
+		BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99571CA1618200FD12F7 /* Lenote.xcdatamodeld */; };
+		BAFF995B1CA1618200FD12F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFF995A1CA1618200FD12F7 /* Assets.xcassets */; };
+		BAFF995E1CA1618200FD12F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFF995C1CA1618200FD12F7 /* LaunchScreen.storyboard */; };
+		BAFF99691CA1618200FD12F7 /* LenoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99681CA1618200FD12F7 /* LenoteTests.swift */; };
+		BAFF99741CA1618200FD12F7 /* LenoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99731CA1618200FD12F7 /* LenoteUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAFF99651CA1618200FD12F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAFF99451CA1618200FD12F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAFF994C1CA1618200FD12F7;
+			remoteInfo = Lenote;
+		};
+		BAFF99701CA1618200FD12F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAFF99451CA1618200FD12F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAFF994C1CA1618200FD12F7;
+			remoteInfo = Lenote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAFF994D1CA1618200FD12F7 /* Lenote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFF99501CA1618200FD12F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAFF99521CA1618200FD12F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAFF99551CA1618200FD12F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAFF99581CA1618200FD12F7 /* Lenote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lenote.xcdatamodel; sourceTree = "<group>"; };
+		BAFF995A1CA1618200FD12F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAFF995D1CA1618200FD12F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAFF995F1CA1618200FD12F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFF99641CA1618200FD12F7 /* LenoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LenoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFF99681CA1618200FD12F7 /* LenoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LenoteTests.swift; sourceTree = "<group>"; };
+		BAFF996A1CA1618200FD12F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAFF996F1CA1618200FD12F7 /* LenoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LenoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFF99731CA1618200FD12F7 /* LenoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LenoteUITests.swift; sourceTree = "<group>"; };
+		BAFF99751CA1618200FD12F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAFF994A1CA1618200FD12F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFF99611CA1618200FD12F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFF996C1CA1618200FD12F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAFF99441CA1618200FD12F7 = {
+			isa = PBXGroup;
+			children = (
+				BAFF994F1CA1618200FD12F7 /* Lenote */,
+				BAFF99671CA1618200FD12F7 /* LenoteTests */,
+				BAFF99721CA1618200FD12F7 /* LenoteUITests */,
+				BAFF994E1CA1618200FD12F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAFF994E1CA1618200FD12F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAFF994D1CA1618200FD12F7 /* Lenote.app */,
+				BAFF99641CA1618200FD12F7 /* LenoteTests.xctest */,
+				BAFF996F1CA1618200FD12F7 /* LenoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAFF994F1CA1618200FD12F7 /* Lenote */ = {
+			isa = PBXGroup;
+			children = (
+				BAFF99501CA1618200FD12F7 /* AppDelegate.swift */,
+				BAFF99521CA1618200FD12F7 /* ViewController.swift */,
+				BAFF99541CA1618200FD12F7 /* Main.storyboard */,
+				BAFF995A1CA1618200FD12F7 /* Assets.xcassets */,
+				BAFF995C1CA1618200FD12F7 /* LaunchScreen.storyboard */,
+				BAFF995F1CA1618200FD12F7 /* Info.plist */,
+				BAFF99571CA1618200FD12F7 /* Lenote.xcdatamodeld */,
+			);
+			path = Lenote;
+			sourceTree = "<group>";
+		};
+		BAFF99671CA1618200FD12F7 /* LenoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAFF99681CA1618200FD12F7 /* LenoteTests.swift */,
+				BAFF996A1CA1618200FD12F7 /* Info.plist */,
+			);
+			path = LenoteTests;
+			sourceTree = "<group>";
+		};
+		BAFF99721CA1618200FD12F7 /* LenoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BAFF99731CA1618200FD12F7 /* LenoteUITests.swift */,
+				BAFF99751CA1618200FD12F7 /* Info.plist */,
+			);
+			path = LenoteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAFF994C1CA1618200FD12F7 /* Lenote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFF99781CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "Lenote" */;
+			buildPhases = (
+				BAFF99491CA1618200FD12F7 /* Sources */,
+				BAFF994A1CA1618200FD12F7 /* Frameworks */,
+				BAFF994B1CA1618200FD12F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lenote;
+			productName = Lenote;
+			productReference = BAFF994D1CA1618200FD12F7 /* Lenote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAFF99631CA1618200FD12F7 /* LenoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFF997B1CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "LenoteTests" */;
+			buildPhases = (
+				BAFF99601CA1618200FD12F7 /* Sources */,
+				BAFF99611CA1618200FD12F7 /* Frameworks */,
+				BAFF99621CA1618200FD12F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAFF99661CA1618200FD12F7 /* PBXTargetDependency */,
+			);
+			name = LenoteTests;
+			productName = LenoteTests;
+			productReference = BAFF99641CA1618200FD12F7 /* LenoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAFF996E1CA1618200FD12F7 /* LenoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFF997E1CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "LenoteUITests" */;
+			buildPhases = (
+				BAFF996B1CA1618200FD12F7 /* Sources */,
+				BAFF996C1CA1618200FD12F7 /* Frameworks */,
+				BAFF996D1CA1618200FD12F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAFF99711CA1618200FD12F7 /* PBXTargetDependency */,
+			);
+			name = LenoteUITests;
+			productName = LenoteUITests;
+			productReference = BAFF996F1CA1618200FD12F7 /* LenoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAFF99451CA1618200FD12F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Wallace Toh";
+				TargetAttributes = {
+					BAFF994C1CA1618200FD12F7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = S3RHAPH6ZQ;
+					};
+					BAFF99631CA1618200FD12F7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = S3RHAPH6ZQ;
+						TestTargetID = BAFF994C1CA1618200FD12F7;
+					};
+					BAFF996E1CA1618200FD12F7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = S3RHAPH6ZQ;
+						TestTargetID = BAFF994C1CA1618200FD12F7;
+					};
+				};
+			};
+			buildConfigurationList = BAFF99481CA1618200FD12F7 /* Build configuration list for PBXProject "Lenote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAFF99441CA1618200FD12F7;
+			productRefGroup = BAFF994E1CA1618200FD12F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAFF994C1CA1618200FD12F7 /* Lenote */,
+				BAFF99631CA1618200FD12F7 /* LenoteTests */,
+				BAFF996E1CA1618200FD12F7 /* LenoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAFF994B1CA1618200FD12F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFF995E1CA1618200FD12F7 /* LaunchScreen.storyboard in Resources */,
+				BAFF995B1CA1618200FD12F7 /* Assets.xcassets in Resources */,
+				BAFF99561CA1618200FD12F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFF99621CA1618200FD12F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFF996D1CA1618200FD12F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAFF99491CA1618200FD12F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFF99531CA1618200FD12F7 /* ViewController.swift in Sources */,
+				BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */,
+				BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFF99601CA1618200FD12F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFF99691CA1618200FD12F7 /* LenoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFF996B1CA1618200FD12F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFF99741CA1618200FD12F7 /* LenoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAFF99661CA1618200FD12F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAFF994C1CA1618200FD12F7 /* Lenote */;
+			targetProxy = BAFF99651CA1618200FD12F7 /* PBXContainerItemProxy */;
+		};
+		BAFF99711CA1618200FD12F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAFF994C1CA1618200FD12F7 /* Lenote */;
+			targetProxy = BAFF99701CA1618200FD12F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAFF99541CA1618200FD12F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAFF99551CA1618200FD12F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAFF995C1CA1618200FD12F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAFF995D1CA1618200FD12F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAFF99761CA1618200FD12F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAFF99771CA1618200FD12F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAFF99791CA1618200FD12F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lenote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = W.Lenote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BAFF997A1CA1618200FD12F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lenote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = W.Lenote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BAFF997C1CA1618200FD12F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LenoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = W.LenoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lenote.app/Lenote";
+			};
+			name = Debug;
+		};
+		BAFF997D1CA1618200FD12F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LenoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = W.LenoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lenote.app/Lenote";
+			};
+			name = Release;
+		};
+		BAFF997F1CA1618200FD12F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LenoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = W.LenoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lenote;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BAFF99801CA1618200FD12F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LenoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = W.LenoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lenote;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAFF99481CA1618200FD12F7 /* Build configuration list for PBXProject "Lenote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFF99761CA1618200FD12F7 /* Debug */,
+				BAFF99771CA1618200FD12F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAFF99781CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "Lenote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFF99791CA1618200FD12F7 /* Debug */,
+				BAFF997A1CA1618200FD12F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BAFF997B1CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "LenoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFF997C1CA1618200FD12F7 /* Debug */,
+				BAFF997D1CA1618200FD12F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BAFF997E1CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "LenoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFF997F1CA1618200FD12F7 /* Debug */,
+				BAFF99801CA1618200FD12F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAFF99571CA1618200FD12F7 /* Lenote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAFF99581CA1618200FD12F7 /* Lenote.xcdatamodel */,
+			);
+			currentVersion = BAFF99581CA1618200FD12F7 /* Lenote.xcdatamodel */;
+			path = Lenote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BAFF99451CA1618200FD12F7 /* Project object */;
+}
