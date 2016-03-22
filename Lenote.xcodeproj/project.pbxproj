@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA23E3E91CA1F6E100516750 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23E3E81CA1F6E100516750 /* NoteCell.swift */; };
+		BA8685381CA1E1770025CE94 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8685371CA1E1770025CE94 /* Classes.swift */; };
+		BA8685481CA1F0040025CE94 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8685461CA1F0040025CE94 /* Note+CoreDataProperties.swift */; };
+		BA8685491CA1F0040025CE94 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8685471CA1F0040025CE94 /* Note.swift */; };
+		BA86854E1CA1F1890025CE94 /* Add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA86854B1CA1F1890025CE94 /* Add@2x.png */; };
+		BA86854F1CA1F1890025CE94 /* Add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA86854C1CA1F1890025CE94 /* Add@3x.png */; };
+		BA8685501CA1F1890025CE94 /* Add@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA86854D1CA1F1890025CE94 /* Add@1x.png */; };
 		BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99501CA1618200FD12F7 /* AppDelegate.swift */; };
-		BAFF99531CA1618200FD12F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99521CA1618200FD12F7 /* ViewController.swift */; };
+		BAFF99531CA1618200FD12F7 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99521CA1618200FD12F7 /* MainTVC.swift */; };
 		BAFF99561CA1618200FD12F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFF99541CA1618200FD12F7 /* Main.storyboard */; };
 		BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99571CA1618200FD12F7 /* Lenote.xcdatamodeld */; };
 		BAFF995B1CA1618200FD12F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFF995A1CA1618200FD12F7 /* Assets.xcassets */; };
@@ -35,9 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA23E3E81CA1F6E100516750 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		BA8685371CA1E1770025CE94 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		BA8685461CA1F0040025CE94 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA8685471CA1F0040025CE94 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		BA86854B1CA1F1890025CE94 /* Add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@2x.png"; sourceTree = "<group>"; };
+		BA86854C1CA1F1890025CE94 /* Add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@3x.png"; sourceTree = "<group>"; };
+		BA86854D1CA1F1890025CE94 /* Add@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@1x.png"; sourceTree = "<group>"; };
 		BAFF994D1CA1618200FD12F7 /* Lenote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFF99501CA1618200FD12F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAFF99521CA1618200FD12F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAFF99521CA1618200FD12F7 /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		BAFF99551CA1618200FD12F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAFF99581CA1618200FD12F7 /* Lenote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lenote.xcdatamodel; sourceTree = "<group>"; };
 		BAFF995A1CA1618200FD12F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +90,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA23E3E71CA1F6B100516750 /* Class Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA23E3E81CA1F6E100516750 /* NoteCell.swift */,
+			);
+			name = "Class Files";
+			sourceTree = "<group>";
+		};
+		BA8685361CA1B9700025CE94 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAFF99521CA1618200FD12F7 /* MainTVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BA86854A1CA1F1770025CE94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA86854B1CA1F1890025CE94 /* Add@2x.png */,
+				BA86854C1CA1F1890025CE94 /* Add@3x.png */,
+				BA86854D1CA1F1890025CE94 /* Add@1x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		BAFF99441CA1618200FD12F7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +139,13 @@
 		BAFF994F1CA1618200FD12F7 /* Lenote */ = {
 			isa = PBXGroup;
 			children = (
+				BA86854A1CA1F1770025CE94 /* Resources */,
+				BA23E3E71CA1F6B100516750 /* Class Files */,
+				BA8685361CA1B9700025CE94 /* View Controllers */,
+				BA8685461CA1F0040025CE94 /* Note+CoreDataProperties.swift */,
+				BA8685471CA1F0040025CE94 /* Note.swift */,
 				BAFF99501CA1618200FD12F7 /* AppDelegate.swift */,
-				BAFF99521CA1618200FD12F7 /* ViewController.swift */,
+				BA8685371CA1E1770025CE94 /* Classes.swift */,
 				BAFF99541CA1618200FD12F7 /* Main.storyboard */,
 				BAFF995A1CA1618200FD12F7 /* Assets.xcassets */,
 				BAFF995C1CA1618200FD12F7 /* LaunchScreen.storyboard */,
@@ -190,7 +235,7 @@
 		BAFF99451CA1618200FD12F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Wallace Toh";
 				TargetAttributes = {
@@ -235,9 +280,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA86854E1CA1F1890025CE94 /* Add@2x.png in Resources */,
+				BA8685501CA1F1890025CE94 /* Add@1x.png in Resources */,
 				BAFF995E1CA1618200FD12F7 /* LaunchScreen.storyboard in Resources */,
 				BAFF995B1CA1618200FD12F7 /* Assets.xcassets in Resources */,
 				BAFF99561CA1618200FD12F7 /* Main.storyboard in Resources */,
+				BA86854F1CA1F1890025CE94 /* Add@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAFF99531CA1618200FD12F7 /* ViewController.swift in Sources */,
+				BAFF99531CA1618200FD12F7 /* MainTVC.swift in Sources */,
 				BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */,
+				BA8685381CA1E1770025CE94 /* Classes.swift in Sources */,
 				BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */,
+				BA8685481CA1F0040025CE94 /* Note+CoreDataProperties.swift in Sources */,
+				BA23E3E91CA1F6E100516750 /* NoteCell.swift in Sources */,
+				BA8685491CA1F0040025CE94 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,10 +456,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lenote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = W.Lenote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -415,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Lenote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = W.Lenote;
@@ -489,6 +544,7 @@
 				BAFF997A1CA1618200FD12F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAFF997B1CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "LenoteTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +553,7 @@
 				BAFF997D1CA1618200FD12F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAFF997E1CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "LenoteUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +562,7 @@
 				BAFF99801CA1618200FD12F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
