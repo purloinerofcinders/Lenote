@@ -10,17 +10,19 @@ import UIKit
 
 class MainTVC: UITableViewController {
     
-    var cellCount = 1
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    var cellCount = 1
+    let manager = NotesManager()
 
     // MARK: - View
-    
      override func viewDidLoad() {
         super.viewDidLoad()
         
-        // MARK: - Navigation Bar
-        
-        self.title = "Notes"
+        title = "Notes"
+        tableView.setContentOffset(CGPointMake(0, searchBar.frame.size.height), animated: true)
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGrayColor()]
+        manager.printSomething()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -29,11 +31,11 @@ class MainTVC: UITableViewController {
     }
     
     //MARK: - Tableview
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as! NoteCell
         
         cell.titleLabel.text = "Hello World!"
+        cell.titleLabel.textColor = UIColor.darkGrayColor()
         
         return cell
     }
@@ -42,11 +44,15 @@ class MainTVC: UITableViewController {
         return cellCount
     }
     
-    //MARK: - Actions
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        if searchBar.isFirstResponder() {
+            searchBar.resignFirstResponder()
+        }
+    }
     
+    //MARK: - Actions
     @IBAction func pressAdd(sender: UIBarButtonItem) {
-        cellCount += 1
-        self.tableView.reloadData()
+        performSegueWithIdentifier("Note", sender: self)
     }
 
 }
