@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -28,7 +27,7 @@
         <scene sceneID="l8j-6F-h9x">
             <objects>
                 <tableViewController id="6eN-Xn-Bmb" customClass="MainTVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Xb-N7-8m7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Xb-N7-8m7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,30 +38,43 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="45" id="QEh-j7-7gI" customClass="NoteCell" customModule="Lenote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="136" width="320" height="45"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="60" id="QEh-j7-7gI" customClass="NoteCell" customModule="Lenote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QEh-j7-7gI" id="Nub-d8-x1I">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBi-y5-vem">
-                                            <rect key="frame" x="15" y="11" width="297" height="21"/>
+                                            <rect key="frame" x="15" y="11" width="264" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="GSY-Hn-ZPU"/>
+                                                <constraint firstAttribute="height" constant="21" id="lDP-lW-GWd"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoN-3H-t9G">
+                                            <rect key="frame" x="15" y="33" width="264" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="P7h-rm-lvi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="HBi-y5-vem" firstAttribute="leading" secondItem="Nub-d8-x1I" secondAttribute="leading" constant="15" id="Qqz-B7-ejB"/>
-                                        <constraint firstItem="HBi-y5-vem" firstAttribute="trailing" secondItem="Nub-d8-x1I" secondAttribute="trailingMargin" id="Y9Q-MD-OIX"/>
-                                        <constraint firstItem="HBi-y5-vem" firstAttribute="centerY" secondItem="Nub-d8-x1I" secondAttribute="centerY" id="lL3-Zo-ljt"/>
+                                        <constraint firstAttribute="trailing" secondItem="WoN-3H-t9G" secondAttribute="trailing" constant="8" id="0eX-kS-2YI"/>
+                                        <constraint firstItem="WoN-3H-t9G" firstAttribute="leading" secondItem="Nub-d8-x1I" secondAttribute="leading" constant="15" id="522-yE-yyd"/>
+                                        <constraint firstItem="HBi-y5-vem" firstAttribute="top" secondItem="Nub-d8-x1I" secondAttribute="top" constant="11" id="A9u-hX-5MS"/>
+                                        <constraint firstItem="HBi-y5-vem" firstAttribute="leading" secondItem="Nub-d8-x1I" secondAttribute="leading" constant="15" id="Ebz-RF-il6"/>
+                                        <constraint firstAttribute="bottom" secondItem="WoN-3H-t9G" secondAttribute="bottom" constant="11" id="UKj-jC-O2n"/>
+                                        <constraint firstAttribute="trailing" secondItem="HBi-y5-vem" secondAttribute="trailing" constant="8" id="wUi-Tm-npr"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="detailsLabel" destination="WoN-3H-t9G" id="ta5-wX-wEZ"/>
                                     <outlet property="titleLabel" destination="HBi-y5-vem" id="Wps-xC-f14"/>
                                 </connections>
                             </tableViewCell>
@@ -73,9 +85,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="tuc-SQ-OGG">
-                        <barButtonItem key="rightBarButtonItem" image="NewNote.png" id="uJU-1s-f1L">
+                        <barButtonItem key="rightBarButtonItem" image="NewFolder.png" id="uJU-1s-f1L">
                             <connections>
-                                <action selector="pressAdd:" destination="6eN-Xn-Bmb" id="lPW-Hz-EGG"/>
+                                <action selector="pressNewFolder:" destination="6eN-Xn-Bmb" id="dYC-Lt-qCL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -83,62 +95,14 @@
                     <size key="freeformSize" width="320" height="500"/>
                     <connections>
                         <outlet property="searchBar" destination="vGp-fM-uQi" id="mGt-1Q-a1K"/>
-                        <segue destination="d0f-sC-9LK" kind="show" identifier="Note" id="Vim-qh-LtY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1I0-FY-iy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778" y="393"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="r4w-O3-kD8">
-            <objects>
-                <viewController id="d0f-sC-9LK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qlI-4x-yKC"/>
-                        <viewControllerLayoutGuide type="bottom" id="XAj-9B-1BE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="498-gA-bDo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7B-tt-3EZ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="386"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsx-6d-tvm">
-                                <rect key="frame" x="0.0" y="451" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="OSV-Gw-me2"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="hi" id="HWN-PW-C00"/>
-                                    <tabBarItem systemItem="more" id="46d-Jl-mWL"/>
-                                </items>
-                            </tabBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="qsx-6d-tvm" firstAttribute="top" secondItem="i7B-tt-3EZ" secondAttribute="bottom" constant="1" id="4K4-bd-2Mt"/>
-                            <constraint firstItem="i7B-tt-3EZ" firstAttribute="leading" secondItem="498-gA-bDo" secondAttribute="leading" id="5HS-f6-O7w"/>
-                            <constraint firstItem="i7B-tt-3EZ" firstAttribute="top" secondItem="qlI-4x-yKC" secondAttribute="bottom" id="Rtd-VV-zg8"/>
-                            <constraint firstAttribute="trailing" secondItem="i7B-tt-3EZ" secondAttribute="trailing" id="gv7-9g-JLq"/>
-                            <constraint firstAttribute="trailing" secondItem="qsx-6d-tvm" secondAttribute="trailing" id="hQJ-aW-K6T"/>
-                            <constraint firstItem="XAj-9B-1BE" firstAttribute="top" secondItem="qsx-6d-tvm" secondAttribute="bottom" id="nEO-Mb-abD"/>
-                            <constraint firstItem="qsx-6d-tvm" firstAttribute="leading" secondItem="498-gA-bDo" secondAttribute="leading" id="z0d-dg-AIO"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="6RV-9h-0d9"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="500"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UCf-50-fXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1407" y="393"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="NewNote.png" width="22" height="22"/>
+        <image name="NewFolder.png" width="24" height="20"/>
     </resources>
 </document>

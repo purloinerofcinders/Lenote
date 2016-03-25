@@ -1,5 +1,5 @@
 //
-//  Note+CoreDataProperties.swift
+//  Folder+CoreDataProperties.swift
 //  Lenote
 //
 //  Created by Wallace Toh on 25/3/16.
@@ -12,9 +12,9 @@
 import Foundation
 import CoreData
 
-extension Note {
+extension Folder {
 
     @NSManaged var title: String?
-    @NSManaged var folder: NSManagedObject?
+    @NSManaged var notes: NSSet?
 
 }

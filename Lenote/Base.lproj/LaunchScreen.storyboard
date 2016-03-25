@@ -18,16 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2N-QF-QRp">
-                                <rect key="frame" x="120" y="233" width="81" height="33"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
+                                <rect key="frame" x="108" y="229" width="104" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a notes application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXY-n7-z7D">
+                                <rect key="frame" x="111" y="264" width="99" height="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="O2N-QF-QRp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="NBv-EE-faU"/>
+                            <constraint firstItem="MXY-n7-z7D" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NfF-Zb-8B9"/>
                             <constraint firstItem="O2N-QF-QRp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OwU-tS-UwY"/>
+                            <constraint firstItem="MXY-n7-z7D" firstAttribute="top" secondItem="O2N-QF-QRp" secondAttribute="bottom" constant="-7" id="Rcz-ln-Sxz"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
