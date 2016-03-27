@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FB3EAAFC966E35CE62B0A48 /* Pods_Lenote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA8E481634B7B35D8C6B710 /* Pods_Lenote.framework */; };
 		BA06ADDB1CA347830059E6A8 /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA06ADD91CA347830059E6A8 /* AppIcon@2x.png */; };
 		BA06ADDC1CA347830059E6A8 /* AppIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA06ADDA1CA347830059E6A8 /* AppIcon@3x.png */; };
-		BA23E3E91CA1F6E100516750 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23E3E81CA1F6E100516750 /* NoteCell.swift */; };
+		BA23E3E91CA1F6E100516750 /* FolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23E3E81CA1F6E100516750 /* FolderCell.swift */; };
 		BA23E3ED1CA1FC8300516750 /* Add@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA23E3EA1CA1FC8300516750 /* Add@1x.png */; };
 		BA23E3EE1CA1FC8300516750 /* Add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA23E3EB1CA1FC8300516750 /* Add@2x.png */; };
 		BA23E3EF1CA1FC8300516750 /* Add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA23E3EC1CA1FC8300516750 /* Add@3x.png */; };
@@ -27,8 +28,10 @@
 		BAFBE06F1CA460820046E752 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBE06B1CA460820046E752 /* Note.swift */; };
 		BAFBE0701CA460820046E752 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBE06C1CA460820046E752 /* Folder+CoreDataProperties.swift */; };
 		BAFBE0711CA460820046E752 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBE06D1CA460820046E752 /* Folder.swift */; };
+		BAFEB7EE1CA608F900B394EF /* FolderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEB7ED1CA608F900B394EF /* FolderTVC.swift */; };
+		BAFEB7F11CA60CAC00B394EF /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEB7F01CA60CAC00B394EF /* NoteCell.swift */; };
 		BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99501CA1618200FD12F7 /* AppDelegate.swift */; };
-		BAFF99531CA1618200FD12F7 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99521CA1618200FD12F7 /* MainTVC.swift */; };
+		BAFF99531CA1618200FD12F7 /* FoldersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99521CA1618200FD12F7 /* FoldersTVC.swift */; };
 		BAFF99561CA1618200FD12F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFF99541CA1618200FD12F7 /* Main.storyboard */; };
 		BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99571CA1618200FD12F7 /* Lenote.xcdatamodeld */; };
 		BAFF995B1CA1618200FD12F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFF995A1CA1618200FD12F7 /* Assets.xcassets */; };
@@ -55,9 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		596B0EB15EA16457A5874DDD /* Pods-Lenote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lenote/Pods-Lenote.debug.xcconfig"; sourceTree = "<group>"; };
 		BA06ADD91CA347830059E6A8 /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon@2x.png"; path = "Resources/AppIcon@2x.png"; sourceTree = "<group>"; };
 		BA06ADDA1CA347830059E6A8 /* AppIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon@3x.png"; path = "Resources/AppIcon@3x.png"; sourceTree = "<group>"; };
-		BA23E3E81CA1F6E100516750 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		BA23E3E81CA1F6E100516750 /* FolderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCell.swift; sourceTree = "<group>"; };
 		BA23E3EA1CA1FC8300516750 /* Add@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Add@1x.png"; path = "Resources/Add@1x.png"; sourceTree = "<group>"; };
 		BA23E3EB1CA1FC8300516750 /* Add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Add@2x.png"; path = "Resources/Add@2x.png"; sourceTree = "<group>"; };
 		BA23E3EC1CA1FC8300516750 /* Add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Add@3x.png"; path = "Resources/Add@3x.png"; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		BA4C97CF1CA2B71500FDEAF9 /* NewNote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NewNote@2x.png"; path = "Resources/NewNote@2x.png"; sourceTree = "<group>"; };
 		BA4C97D01CA2B71500FDEAF9 /* NewNote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NewNote@3x.png"; path = "Resources/NewNote@3x.png"; sourceTree = "<group>"; };
 		BA8685371CA1E1770025CE94 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		BAFAC9171CA5683200EB098E /* Lenote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lenote-Bridging-Header.h"; sourceTree = "<group>"; };
 		BAFBE05A1CA451960046E752 /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = More.png; path = Resources/More.png; sourceTree = "<group>"; };
 		BAFBE05B1CA451960046E752 /* More@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "More@2x.png"; path = "Resources/More@2x.png"; sourceTree = "<group>"; };
 		BAFBE05C1CA451960046E752 /* More@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "More@3x.png"; path = "Resources/More@3x.png"; sourceTree = "<group>"; };
@@ -75,9 +80,11 @@
 		BAFBE06B1CA460820046E752 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		BAFBE06C1CA460820046E752 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BAFBE06D1CA460820046E752 /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		BAFEB7ED1CA608F900B394EF /* FolderTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTVC.swift; sourceTree = "<group>"; };
+		BAFEB7F01CA60CAC00B394EF /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		BAFF994D1CA1618200FD12F7 /* Lenote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFF99501CA1618200FD12F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAFF99521CA1618200FD12F7 /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
+		BAFF99521CA1618200FD12F7 /* FoldersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersTVC.swift; sourceTree = "<group>"; };
 		BAFF99551CA1618200FD12F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAFF99581CA1618200FD12F7 /* Lenote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lenote.xcdatamodel; sourceTree = "<group>"; };
 		BAFF995A1CA1618200FD12F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +96,8 @@
 		BAFF996F1CA1618200FD12F7 /* LenoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LenoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFF99731CA1618200FD12F7 /* LenoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LenoteUITests.swift; sourceTree = "<group>"; };
 		BAFF99751CA1618200FD12F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFA8E481634B7B35D8C6B710 /* Pods_Lenote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lenote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4837EF6D092FF4849C50B68 /* Pods-Lenote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lenote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lenote/Pods-Lenote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB3EAAFC966E35CE62B0A48 /* Pods_Lenote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +126,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5891378CD2D5BBDB170D6F53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				596B0EB15EA16457A5874DDD /* Pods-Lenote.debug.xcconfig */,
+				F4837EF6D092FF4849C50B68 /* Pods-Lenote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC9F941B3C72F50CB80D6756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFA8E481634B7B35D8C6B710 /* Pods_Lenote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA23E3E71CA1F6B100516750 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +150,6 @@
 				BAFBE06B1CA460820046E752 /* Note.swift */,
 				BAFBE06C1CA460820046E752 /* Folder+CoreDataProperties.swift */,
 				BAFBE06D1CA460820046E752 /* Folder.swift */,
-				BA23E3E81CA1F6E100516750 /* NoteCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -131,7 +157,8 @@
 		BA8685361CA1B9700025CE94 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BAFF99521CA1618200FD12F7 /* MainTVC.swift */,
+				BAFF99521CA1618200FD12F7 /* FoldersTVC.swift */,
+				BAFEB7ED1CA608F900B394EF /* FolderTVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -157,6 +184,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		BAFEB7EF1CA60BE800B394EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA23E3E81CA1F6E100516750 /* FolderCell.swift */,
+				BAFEB7F01CA60CAC00B394EF /* NoteCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		BAFF99441CA1618200FD12F7 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +200,8 @@
 				BAFF99671CA1618200FD12F7 /* LenoteTests */,
 				BAFF99721CA1618200FD12F7 /* LenoteUITests */,
 				BAFF994E1CA1618200FD12F7 /* Products */,
+				5891378CD2D5BBDB170D6F53 /* Pods */,
+				AC9F941B3C72F50CB80D6756 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +220,7 @@
 			children = (
 				BA86854A1CA1F1770025CE94 /* Resources */,
 				BA23E3E71CA1F6B100516750 /* Models */,
+				BAFEB7EF1CA60BE800B394EF /* Views */,
 				BA8685361CA1B9700025CE94 /* View Controllers */,
 				BA8685371CA1E1770025CE94 /* Classes.swift */,
 				BAFF99501CA1618200FD12F7 /* AppDelegate.swift */,
@@ -190,6 +229,7 @@
 				BAFF995C1CA1618200FD12F7 /* LaunchScreen.storyboard */,
 				BAFF995F1CA1618200FD12F7 /* Info.plist */,
 				BAFF99571CA1618200FD12F7 /* Lenote.xcdatamodeld */,
+				BAFAC9171CA5683200EB098E /* Lenote-Bridging-Header.h */,
 			);
 			path = Lenote;
 			sourceTree = "<group>";
@@ -219,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAFF99781CA1618200FD12F7 /* Build configuration list for PBXNativeTarget "Lenote" */;
 			buildPhases = (
+				D8D9CD0DAD318FDCA043C40C /* Check Pods Manifest.lock */,
 				BAFF99491CA1618200FD12F7 /* Sources */,
 				BAFF994A1CA1618200FD12F7 /* Frameworks */,
 				BAFF994B1CA1618200FD12F7 /* Resources */,
+				406ECE4CEBD89209C875F383 /* Embed Pods Frameworks */,
+				981C6487150D093CD91AD5BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,20 +398,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		406ECE4CEBD89209C875F383 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lenote/Pods-Lenote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		981C6487150D093CD91AD5BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lenote/Pods-Lenote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8D9CD0DAD318FDCA043C40C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAFF99491CA1618200FD12F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAFF99531CA1618200FD12F7 /* MainTVC.swift in Sources */,
+				BAFF99531CA1618200FD12F7 /* FoldersTVC.swift in Sources */,
 				BAFBE06E1CA460820046E752 /* Note+CoreDataProperties.swift in Sources */,
+				BAFEB7F11CA60CAC00B394EF /* NoteCell.swift in Sources */,
 				BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */,
 				BAFBE0701CA460820046E752 /* Folder+CoreDataProperties.swift in Sources */,
 				BAFBE0711CA460820046E752 /* Folder.swift in Sources */,
 				BA8685381CA1E1770025CE94 /* Classes.swift in Sources */,
 				BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */,
 				BAFBE06F1CA460820046E752 /* Note.swift in Sources */,
-				BA23E3E91CA1F6E100516750 /* NoteCell.swift in Sources */,
+				BA23E3E91CA1F6E100516750 /* FolderCell.swift in Sources */,
+				BAFEB7EE1CA608F900B394EF /* FolderTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +599,7 @@
 		};
 		BAFF99791CA1618200FD12F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 596B0EB15EA16457A5874DDD /* Pods-Lenote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -513,12 +607,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = W.Lenote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lenote/Lenote-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BAFF997A1CA1618200FD12F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4837EF6D092FF4849C50B68 /* Pods-Lenote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -526,6 +622,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = W.Lenote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lenote/Lenote-Bridging-Header.h";
 			};
 			name = Release;
 		};

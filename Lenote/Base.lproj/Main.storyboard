@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="182" y="393"/>
         </scene>
-        <!--MainTVC-->
+        <!--FoldersTVC-->
         <scene sceneID="l8j-6F-h9x">
             <objects>
-                <tableViewController id="6eN-Xn-Bmb" customClass="MainTVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6eN-Xn-Bmb" customClass="FoldersTVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Xb-N7-8m7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="60" id="QEh-j7-7gI" customClass="NoteCell" customModule="Lenote" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FolderCell" rowHeight="60" id="QEh-j7-7gI" customClass="FolderCell" customModule="Lenote" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="136" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QEh-j7-7gI" id="Nub-d8-x1I">
@@ -95,14 +95,78 @@
                     <size key="freeformSize" width="320" height="500"/>
                     <connections>
                         <outlet property="searchBar" destination="vGp-fM-uQi" id="mGt-1Q-a1K"/>
+                        <segue destination="R4c-gt-cSd" kind="show" identifier="Folder" id="JkC-Xl-4JQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1I0-FY-iy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778" y="393"/>
         </scene>
+        <!--FolderTVC-->
+        <scene sceneID="a2v-56-J29">
+            <objects>
+                <tableViewController id="R4c-gt-cSd" customClass="FolderTVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="p4i-rc-TRl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="hro-C2-XRS">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="60" id="3xm-IZ-HGd" customClass="NoteCell" customModule="Lenote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3xm-IZ-HGd" id="tXD-lR-KU0">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHR-a1-wFM">
+                                            <rect key="frame" x="20" y="19" width="102" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="102" id="BRc-dU-8iz"/>
+                                                <constraint firstAttribute="height" constant="21" id="EaO-Es-k6k"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CHR-a1-wFM" firstAttribute="centerY" secondItem="tXD-lR-KU0" secondAttribute="centerY" id="Jll-xv-qSa"/>
+                                        <constraint firstItem="CHR-a1-wFM" firstAttribute="leading" secondItem="tXD-lR-KU0" secondAttribute="leading" constant="20" id="aZd-8Q-HKU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="CHR-a1-wFM" id="vqi-0S-idw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="R4c-gt-cSd" id="X2n-2B-eIM"/>
+                            <outlet property="delegate" destination="R4c-gt-cSd" id="Ctw-lL-xHQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bul-W9-v8v">
+                        <barButtonItem key="rightBarButtonItem" image="NewNote.png" id="o0q-hM-JXo">
+                            <connections>
+                                <action selector="pressNewNote:" destination="R4c-gt-cSd" id="dgA-bp-7KS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRM-lJ-2nV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1427" y="393"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NewFolder.png" width="24" height="20"/>
+        <image name="NewNote.png" width="22" height="22"/>
     </resources>
 </document>

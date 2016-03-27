@@ -1,15 +1,16 @@
 //
-//  NoteCell.swift
+//  FolderCell.swift
 //  Lenote
 //
-//  Created by Wallace Toh on 26/3/16.
+//  Created by Wallace Toh on 23/3/16.
 //  Copyright © 2016 Wallace Toh. All rights reserved.
 //
 
 import UIKit
 
-class NoteCell: UITableViewCell {
+class FolderCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
