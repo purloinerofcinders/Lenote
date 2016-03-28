@@ -37,6 +37,7 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        tableView.reloadData()
     }
     
     //MARK: - Tableview
@@ -45,13 +46,25 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
         let folder = folders[indexPath.row]
         
         cell.titleLabel.text = folder.title
-        cell.detailsLabel.text = "No items"
+        
+        switch (folder.notes?.count)! {
+        case 0:
+            cell.detailsLabel.text = "No items"
+        case 1:
+            cell.detailsLabel.text = "1 item"
+        default:
+            cell.detailsLabel.text = String(format: "%i items", (folder.notes?.count)!)
+        }
         
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if searchBar.isFirstResponder() {
+            searchBar.resignFirstResponder()
+        }
         
         folder = folders[indexPath.row]
         
@@ -63,7 +76,7 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
             let folder = folders[indexPath.row]
             
             notesManager.deleteFolder(folder)
-            folders = notesManager.fetchFolders() as! [Folder]
+            folders.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
@@ -82,27 +95,31 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         switch searchBar.text! {
-            case commands.deleteAllNotes.rawValue:
-                let notes = notesManager.fetchNotes()
-                
-                for note in notes! {
-                    print((note as! Note).title)
-                }
+        case commands.deleteAllNotes.rawValue:
+            notesManager.deleteAllNotes()
             
-            case commands.printAllNotes.rawValue:
-                let notes = notesManager.fetchNotes()
-                
-                for note in notes! {
-                    print((note as! Note).title)
-                    print(((note as! Note).folder as! Folder).title)
-                }
+            folders = notesManager.fetchFolders() as! [Folder]
             
-            case commands.deleteAllData.rawValue:
-                notesManager.deleteAllData()
+            tableView.reloadData()
+        
+        case commands.printAllNotes.rawValue:
+            let notes = notesManager.fetchNotes()
             
-            default:
-                return
+            for note in notes! {
+                print(String(format: "Title: %@, Folder: %@", (note as! Note).title!, ((note as! Note).folder! as Folder).title!))
+            }
+        
+        case commands.deleteAllData.rawValue:
+            notesManager.deleteAllData()
+            
+            folders = notesManager.fetchFolders() as! [Folder]
+            
+            tableView.reloadData()
+        default:
+            return
         }
+        
+        searchBar.resignFirstResponder()
     }
     
     //MARK: - Event Handlers

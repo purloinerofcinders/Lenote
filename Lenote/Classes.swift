@@ -61,6 +61,13 @@ class NotesManager {
         let folderObject: NSManagedObject = folder as NSManagedObject
         managedContext.deleteObject(folderObject)
         
+        let notes = folder.notes
+        
+        for note in notes! {
+            let noteObject: NSManagedObject = note as! NSManagedObject
+            managedContext.deleteObject(noteObject)
+        }
+        
         do {
             try managedContext.save()
         } catch {
@@ -78,21 +85,62 @@ class NotesManager {
             
             return fetchedFolders
         } catch {
-            fatalError("Failed to fetch folders: \(error)")
+            fatalError("Failure to save context: \(error)")
         }
     }
     
     //MARK: - Note Setters
-    func createNoteWithTitle(title: String!, folder: Folder!) {
+    func createEmptyNoteInFolder(folder: Folder!) -> Note {
         let note = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext:managedContext) as! Note
         
-        note.title = title
+        note.title = ""
+        note.composition = ""
         note.folder = folder
+        
+        do {
+            try managedContext.save()
+            return note
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+    }
+    
+    func saveNote(note: Note!, title: String, content: String) {
+        note.title = title
+        note.composition = content
         
         do {
             try managedContext.save()
         } catch {
             fatalError("Failure to save context: \(error)")
+        }
+    }
+    
+    func deleteNote(note: Note!) {
+        let noteObject: NSManagedObject = note as NSManagedObject
+        managedContext.deleteObject(noteObject)
+        
+        do {
+            try managedContext.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+    }
+    
+    func deleteAllNotes() {
+        let context = managedContext
+        let fetchRequest = NSFetchRequest(entityName: "Note")
+        var fetchedNotes = [Note]()
+        
+        do {
+            fetchedNotes = try context.executeFetchRequest(fetchRequest) as! [Note]
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+        
+        for note in fetchedNotes {
+            let noteObject: NSManagedObject = note as NSManagedObject
+            managedContext.deleteObject(noteObject)
         }
     }
     
@@ -106,7 +154,7 @@ class NotesManager {
             
             return fetchedNotes
         } catch {
-            fatalError("Failed to fetch notes: \(error)")
+            fatalError("Failure to save context: \(error)")
         }
     }
     
@@ -121,7 +169,7 @@ class NotesManager {
             
             return folder.notes?.allObjects
         } catch {
-            fatalError("Failed to fetch notes: \(error)")
+            fatalError("Failure to save context: \(error)")
         }
     }
 }

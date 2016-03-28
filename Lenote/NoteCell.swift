@@ -10,6 +10,9 @@ import UIKit
 
 class NoteCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var compositionLabel: UILabel!
+    
+    var note: Note?
     
     override func awakeFromNib() {
         super.awakeFromNib()
