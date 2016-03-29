@@ -1,13 +1,16 @@
 PODS:
   - LKAlertController (1.7.0)
   - MGSwipeTableCell (1.5.4)
+  - SwiftDate (3.0.8)
 
 DEPENDENCIES:
   - LKAlertController (~> 1.7.0)
   - MGSwipeTableCell (~> 1.5.4)
+  - SwiftDate (~> 3.0.8)
 
 SPEC CHECKSUMS:
   LKAlertController: 2d34a1df7bffbf23c888e11d391a7b76a237443e
   MGSwipeTableCell: cffd3378af74eb991911f132c5f3911261fda860
+  SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
 
 COCOAPODS: 0.39.0

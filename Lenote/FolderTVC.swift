@@ -17,6 +17,8 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
     var notes = [AnyObject]()
     var note: Note?
     
+    var shouldBringUpKeyboard: Bool?
+    
     //MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +57,10 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
             cell.titleLabel.text = notes[indexPath.row].title
         }
         
-        if (notes[indexPath.row] as! Note).composition == "" {
-            cell.compositionLabel.text = "No content"
+        if (notes[indexPath.row] as! Note).content == "" {
+            cell.contentLabel.text = "No content"
         } else {
-            cell.compositionLabel.text = (notes[indexPath.row] as! Note).composition
+            cell.contentLabel.text = (notes[indexPath.row] as! Note).content
         }
         
         return cell
@@ -67,6 +69,8 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! NoteCell
         note = cell.note
+        
+        shouldBringUpKeyboard = false
         
         performSegueWithIdentifier("Note", sender: self)
     }
@@ -100,6 +104,7 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
         if segue.identifier == "Note" {
             let destVC = segue.destinationViewController as! NoteTVC
             
+            destVC.shouldBringUpKeyboard = shouldBringUpKeyboard
             destVC.note = note
         } else if segue.identifier == "NoteTypes" {
             let destVC = segue.destinationViewController as! NoteTypesTVC
@@ -114,6 +119,8 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
         
         switch noteType {
         case 0:
+            shouldBringUpKeyboard = true
+            
             note = notesManager.createEmptyNoteInFolder(folder)
             notes = notesManager.fetchNotesFromFolder(folder) as! [AnyObject]
             

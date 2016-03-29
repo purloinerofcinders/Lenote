@@ -10,7 +10,7 @@ import UIKit
 
 class NoteCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var compositionLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     
     var note: Note?
     

@@ -147,7 +147,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="compositionLabel" destination="Wla-ko-PJs" id="yc2-HP-kKX"/>
+                                    <outlet property="contentLabel" destination="Wla-ko-PJs" id="3Ix-Tq-s8U"/>
                                     <outlet property="titleLabel" destination="CHR-a1-wFM" id="vqi-0S-idw"/>
                                 </connections>
                             </tableViewCell>
@@ -202,7 +202,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="E8X-iQ-UVh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 </textField>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem Ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2ci-5l-M6A">
                                                     <rect key="frame" x="10" y="37" width="300" height="242"/>
@@ -244,7 +244,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="500"/>
                     <connections>
-                        <outlet property="compositionTextView" destination="2ci-5l-M6A" id="gED-dF-wKd"/>
+                        <outlet property="contentTextView" destination="2ci-5l-M6A" id="QEd-gE-UjU"/>
                         <outlet property="titleTextField" destination="mu6-bZ-th0" id="Xov-4m-MLt"/>
                     </connections>
                 </tableViewController>

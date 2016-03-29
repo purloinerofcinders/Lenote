@@ -49,7 +49,8 @@ class NotesManager {
         let folder = NSEntityDescription.insertNewObjectForEntityForName("Folder", inManagedObjectContext:managedContext) as! Folder
         
         folder.title = title
-
+        folder.createdDate = NSDate()
+        
         do {
             try managedContext.save()
         } catch {
@@ -94,7 +95,8 @@ class NotesManager {
         let note = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext:managedContext) as! Note
         
         note.title = ""
-        note.composition = ""
+        note.content = ""
+        note.createdDate = NSDate()
         note.folder = folder
         
         do {
@@ -107,7 +109,7 @@ class NotesManager {
     
     func saveNote(note: Note!, title: String, content: String) {
         note.title = title
-        note.composition = content
+        note.content = content
         
         do {
             try managedContext.save()
@@ -172,4 +174,8 @@ class NotesManager {
             fatalError("Failure to save context: \(error)")
         }
     }
+}
+
+class DateManager {
+    
 }

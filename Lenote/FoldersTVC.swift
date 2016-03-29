@@ -8,6 +8,7 @@
 
 import UIKit
 import LKAlertController
+import SwiftDate
 
 class FoldersTVC: UITableViewController, UISearchBarDelegate {
     enum commands: String {
@@ -135,10 +136,10 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
         
         Alert(title: "New Folder", message: "Enter a name for this folder.")
             .addAction("Cancel", style: .Cancel, handler: { _ in
-                print(textField.isFirstResponder())
+                print(textField.isFirstResponder()) //FIXME: - Dismiss keyboard
             })
             .addAction("Save", style: .Default, handler: { _ in
-                print(textField.isFirstResponder())
+                print(textField.isFirstResponder()) //FIXME: - Dismiss keyboard
                 self.notesManager.createFolderWithName(textField.text)
                 self.folders = self.notesManager.fetchFolders() as! [Folder]
                 self.tableView.reloadData()

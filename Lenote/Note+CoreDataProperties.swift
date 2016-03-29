@@ -2,7 +2,7 @@
 //  Note+CoreDataProperties.swift
 //  Lenote
 //
-//  Created by Wallace Toh on 28/3/16.
+//  Created by Wallace Toh on 29/3/16.
 //  Copyright © 2016 Wallace Toh. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,8 +14,9 @@ import CoreData
 
 extension Note {
 
+    @NSManaged var content: String?
     @NSManaged var title: String?
-    @NSManaged var composition: String?
+    @NSManaged var createdDate: NSDate?
     @NSManaged var folder: Folder?
 
 }
