@@ -93,16 +93,22 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate 
     }
     
     dynamic func didDismissNotesTypeTVC(notification: NSNotification) {
-        if notification.object as! Int == 0 {
+        let noteType: Int = notification.object as! Int
+        
+        switch noteType {
+        case 0:
             note = notesManager.createEmptyNoteInFolder(folder)
             notes = notesManager.fetchNotesFromFolder(folder) as! [AnyObject]
             
             tableView.reloadData()
             
             performSegueWithIdentifier("Note", sender: self)
+            
+        default:
+            break
         }
     }
-    
+  
     //MARK: - Misc
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.None

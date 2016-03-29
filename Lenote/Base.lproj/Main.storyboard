@@ -254,90 +254,90 @@
         <!--Select Type-->
         <scene sceneID="NgA-ai-Wpp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdh-je-ceC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="WWA-1v-8ab" customClass="NoteTypesTVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="IWF-38-ldM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IWF-38-ldM">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="choose type" id="I1E-cf-5uI">
+                            <tableViewSection id="I1E-cf-5uI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="brh-b9-GR4">
-                                        <rect key="frame" x="0.0" y="50" width="200" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="brh-b9-GR4" id="7Qo-vO-ZbI">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLl-6V-3HG">
-                                                    <rect key="frame" x="83" y="12" width="35" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="35" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.12941176469999999" green="0.47843137250000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="335-rn-rEV">
-                                        <rect key="frame" x="0.0" y="94" width="200" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="200" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="335-rn-rEV" id="9P7-rE-fLy">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checklist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-mG-KD3">
-                                                    <rect key="frame" x="67" y="12" width="67" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="67" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.12941176469999999" green="0.47843137250000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hDg-Kc-lOS">
-                                        <rect key="frame" x="0.0" y="138" width="200" height="44"/>
+                                        <rect key="frame" x="0.0" y="88" width="200" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hDg-Kc-lOS" id="EfU-ST-UhY">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-8W-O6a">
-                                                    <rect key="frame" x="65" y="12" width="70" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="70" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.12941176469999999" green="0.47843137250000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mEK-qA-G0F">
-                                        <rect key="frame" x="0.0" y="182" width="200" height="44"/>
+                                        <rect key="frame" x="0.0" y="132" width="200" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mEK-qA-G0F" id="BKb-PU-l84">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Storyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ml2-aQ-W5Q">
-                                                    <rect key="frame" x="60" y="12" width="81" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="81" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.12941176469999999" green="0.47843137250000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Uql-ae-oKn">
-                                        <rect key="frame" x="0.0" y="226" width="200" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="200" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uql-ae-oKn" id="0gY-il-QMR">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Countdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1H-wZ-RUi">
-                                                    <rect key="frame" x="58" y="12" width="84" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="84" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.12941176469999999" green="0.47843137250000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -356,6 +356,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="200" height="300"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdh-je-ceC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1608" y="-119"/>
         </scene>

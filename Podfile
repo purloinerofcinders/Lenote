@@ -6,6 +6,7 @@ use_frameworks!
 target 'Lenote' do
 
 pod 'MGSwipeTableCell', '~> 1.5.4'
+pod 'LKAlertController', '~> 1.7.0'
 
 end
 

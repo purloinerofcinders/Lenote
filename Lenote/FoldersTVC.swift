@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import LKAlertController
 
-class FoldersTVC: UITableViewController, UISearchBarDelegate {
+class FoldersTVC: UITableViewController, UISearchBarDelegate, UIAlertViewDelegate {
     enum commands: String {
         case deleteAllNotes = "deletenotes"
         case printAllNotes = "printnotes"
@@ -124,18 +125,21 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
     
     //MARK: - Event Handlers
     @IBAction func pressNewFolder(sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "New Folder", message: "Enter a name for this folder.", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Confirm",
-            style: UIAlertActionStyle.Default,
-            handler: {(action:UIAlertAction) -> Void in
-                let textField = alert.textFields![0] as UITextField
+        var textField = UITextField()
+        textField.placeholder = "Name"
+        textField.font = textField.font?.fontWithSize(14)
+        textField.returnKeyType = .Done
+        
+        Alert(title: "New Folder", message: "Enter a name for this folder.")
+            .addAction("Cancel", style: .Cancel, handler: { _ in
+                print(textField.isFirstResponder())
+            })
+            .addAction("Save", style: .Default, handler: { _ in
+                print(textField.isFirstResponder())
                 self.notesManager.createFolderWithName(textField.text)
                 self.folders = self.notesManager.fetchFolders() as! [Folder]
                 self.tableView.reloadData()
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-        alert.addTextFieldWithConfigurationHandler(textField)
-        presentViewController(alert, animated: true, completion: nil)
+            }).addTextField(&textField).show()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -144,12 +148,6 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
             
             destVC.folder = folder
         }
-    }
-    
-    //MARK: - Misc
-    
-    func textField(textField: UITextField!) {
-        textField.placeholder = "Name"
     }
 }
 
