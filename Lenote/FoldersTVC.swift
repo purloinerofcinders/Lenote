@@ -9,7 +9,7 @@
 import UIKit
 import LKAlertController
 
-class FoldersTVC: UITableViewController, UISearchBarDelegate, UIAlertViewDelegate {
+class FoldersTVC: UITableViewController, UISearchBarDelegate {
     enum commands: String {
         case deleteAllNotes = "deletenotes"
         case printAllNotes = "printnotes"
@@ -29,6 +29,7 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate, UIAlertViewDelegat
         
         title = "Folders"
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGrayColor()]
+        tableView.contentOffset = CGPointMake(0, searchBar.frame.size.height)
         
         searchBar.delegate = self
         
@@ -39,6 +40,12 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate, UIAlertViewDelegat
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        view.endEditing(true)
     }
     
     //MARK: - Tableview
@@ -62,10 +69,6 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate, UIAlertViewDelegat
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        if searchBar.isFirstResponder() {
-            searchBar.resignFirstResponder()
-        }
         
         folder = folders[indexPath.row]
         
@@ -95,6 +98,8 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate, UIAlertViewDelegat
     //MARK: - Searchbar
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        
         switch searchBar.text! {
         case commands.deleteAllNotes.rawValue:
             notesManager.deleteAllNotes()
@@ -119,8 +124,6 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate, UIAlertViewDelegat
         default:
             return
         }
-        
-        searchBar.resignFirstResponder()
     }
     
     //MARK: - Event Handlers

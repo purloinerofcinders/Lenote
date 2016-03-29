@@ -110,7 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="hro-C2-XRS">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="hro-C2-XRS">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" red="0.50603797939999995" green="0.50603797939999995" blue="0.50603797939999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,6 +167,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="500"/>
                     <connections>
+                        <outlet property="searchBar" destination="hro-C2-XRS" id="cHQ-Il-IsY"/>
                         <segue destination="HXV-CJ-fmf" kind="show" identifier="Note" id="Gj5-R1-zPV"/>
                         <segue destination="WWA-1v-8ab" kind="popoverPresentation" identifier="NoteTypes" popoverAnchorBarButtonItem="o0q-hM-JXo" id="P69-UV-Y9I">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>

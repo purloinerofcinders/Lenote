@@ -8,7 +8,9 @@
 
 import UIKit
 
-class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate {
+class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     let notesManager = NotesManager()
     
     var folder: Folder?
@@ -22,6 +24,9 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FolderTVC.didDismissNotesTypeTVC(_:)), name:"SelectedType", object: nil)
         
         title = folder?.title
+        tableView.contentOffset = CGPointMake(0, searchBar.frame.size.height)
+        
+        searchBar.delegate = self
         
         notes = (folder?.notes?.allObjects)!
     }
@@ -30,6 +35,12 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate 
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        view.endEditing(true)
     }
     
     //MARK: - Tableview
@@ -70,6 +81,12 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate 
         }
     }
     
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        if searchBar.isFirstResponder() {
+            searchBar.resignFirstResponder()
+        }
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
     }
@@ -103,10 +120,15 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate 
             tableView.reloadData()
             
             performSegueWithIdentifier("Note", sender: self)
-            
+            self.resignFirstResponder()
         default:
             break
         }
+    }
+    
+    //MARK: - Searchbar
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
   
     //MARK: - Misc
