@@ -35,17 +35,17 @@
                         <sections>
                             <tableViewSection headerTitle="" id="ffX-xV-eEi">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="121" id="gJz-cj-Sqz">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="121"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="91" id="gJz-cj-Sqz">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gJz-cj-Sqz" id="hFh-WA-qNh">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="c1a-8t-sJP">
-                                        <rect key="frame" x="0.0" y="156" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="126" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c1a-8t-sJP" id="UMl-WD-pGA">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -64,8 +64,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="bAH-vI-Zc8">
-                                        <rect key="frame" x="0.0" y="206" width="320" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="bAH-vI-Zc8">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bAH-vI-Zc8" id="naR-Do-MAb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -88,8 +88,8 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="4ag-bp-kH4">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="WWu-IA-AIl">
-                                        <rect key="frame" x="0.0" y="292" width="320" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" tag="2" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="WWu-IA-AIl">
+                                        <rect key="frame" x="0.0" y="262" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WWu-IA-AIl" id="BsQ-bW-Jcc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -206,6 +206,63 @@
             </objects>
             <point key="canvasLocation" x="778" y="393"/>
         </scene>
+        <!--SettingsTVC-->
+        <scene sceneID="TkT-4w-zwq">
+            <objects>
+                <tableViewController id="cBS-bY-SDD" customClass="SettingsTVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="LXb-23-ieD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="General" id="3E8-lC-i4g">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RPb-N6-sfG">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RPb-N6-sfG" id="tYc-6V-VcN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DN2-oP-faU">
+                                        <rect key="frame" x="0.0" y="158" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DN2-oP-faU" id="Sw6-pF-bfw">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="br1-pM-Kyb">
+                                        <rect key="frame" x="0.0" y="202" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="br1-pM-Kyb" id="sjG-XZ-R2u">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="cBS-bY-SDD" id="q8m-ya-hpf"/>
+                            <outlet property="delegate" destination="cBS-bY-SDD" id="z8T-9X-Rpq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3Np-jZ-SKc">
+                        <barButtonItem key="leftBarButtonItem" image="Menu.png" id="N6s-qa-aKi">
+                            <connections>
+                                <action selector="pressMenu:" destination="cBS-bY-SDD" id="96t-op-tap"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eai-Fb-rAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="1068"/>
+        </scene>
         <!--FolderTVC-->
         <scene sceneID="a2v-56-J29">
             <objects>
@@ -261,7 +318,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="bul-W9-v8v">
-                        <barButtonItem key="rightBarButtonItem" image="More.png" id="o0q-hM-JXo">
+                        <barButtonItem key="rightBarButtonItem" image="NewItem.png" id="o0q-hM-JXo">
                             <connections>
                                 <action selector="pressNewNote:" destination="R4c-gt-cSd" id="dgA-bp-7KS"/>
                             </connections>
@@ -484,12 +541,32 @@
             </objects>
             <point key="canvasLocation" x="2420" y="-119"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jBm-EA-RoW">
+            <objects>
+                <navigationController storyboardIdentifier="SettingsTVC" automaticallyAdjustsScrollViewInsets="NO" id="J6N-7G-qxH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ih0-Jd-mo9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cBS-bY-SDD" kind="relationship" relationship="rootViewController" id="NwS-Dr-chR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DaZ-oc-epr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="1068"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Folder.png" width="22" height="27"/>
         <image name="Menu.png" width="24" height="14"/>
-        <image name="More.png" width="22" height="22"/>
         <image name="NewFolder.png" width="24" height="20"/>
+        <image name="NewItem.png" width="20" height="20"/>
         <image name="Profile.png" width="27" height="32"/>
         <image name="Settings.png" width="33" height="29"/>
     </resources>

@@ -10,7 +10,7 @@ import UIKit
 import LKAlertController
 import SwiftDate
 
-class FoldersTVC: UITableViewController, UISearchBarDelegate {
+class FoldersTVC: UITableViewController, UISearchBarDelegate, UITextFieldDelegate {
     enum commands: String {
         case deleteAllNotes = "deletenotes"
         case printAllNotes = "printnotes"
@@ -47,6 +47,10 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
         super.viewWillDisappear(animated)
         
         view.endEditing(true)
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
     }
     
     //MARK: - Tableview
@@ -97,7 +101,6 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
     }
     
     //MARK: - Searchbar
-    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         
@@ -140,11 +143,8 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate {
         textField.returnKeyType = .Done
         
         Alert(title: "New Folder", message: "Enter a name for this folder.")
-            .addAction("Cancel", style: .Cancel, handler: { _ in
-                print(textField.isFirstResponder()) //FIXME: - Dismiss keyboard
-            })
+            .addAction("Cancel")
             .addAction("Save", style: .Default, handler: { _ in
-                print(textField.isFirstResponder()) //FIXME: - Dismiss keyboard
                 self.notesManager.createFolderWithName(textField.text)
                 self.folders = self.notesManager.fetchFolders() as! [Folder]
                 self.tableView.reloadData()
