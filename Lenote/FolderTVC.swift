@@ -107,7 +107,7 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
             destVC.shouldBringUpKeyboard = shouldBringUpKeyboard
             destVC.note = note
         } else if segue.identifier == "NoteTypes" {
-            let destVC = segue.destinationViewController as! NoteTypesTVC
+            let destVC = segue.destinationViewController
             
             destVC.modalPresentationStyle = UIModalPresentationStyle.Popover
             destVC.popoverPresentationController!.delegate = self

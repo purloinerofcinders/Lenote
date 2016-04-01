@@ -13,6 +13,8 @@ class NoteTypesTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Select Type"
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGrayColor()]
     }
     
     //MARK: - Tableview

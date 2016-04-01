@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Checklist" syncable="YES">
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CItem" inverseName="checklist" inverseEntity="CItem" syncable="YES"/>
+    </entity>
+    <entity name="CItem" syncable="YES">
+        <attribute name="marked" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="checklist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Checklist" inverseName="item" inverseEntity="Checklist" syncable="YES"/>
+    </entity>
     <entity name="Folder" representedClassName=".Folder" syncable="YES">
         <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,5 +24,7 @@
     <elements>
         <element name="Folder" positionX="-63" positionY="-9" width="128" height="90"/>
         <element name="Note" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Checklist" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="CItem" positionX="-45" positionY="27" width="128" height="90"/>
     </elements>
 </model>
