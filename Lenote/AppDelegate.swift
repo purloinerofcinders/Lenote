@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
@@ -154,6 +153,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return viewController
     }
     
+    func settingsViewController() -> UIViewController {
+        let viewController = viewControllerForStoryboardId("SettingsTVC")
+        
+        return viewController
+    }
+    
     private func menuViewController() -> UIViewController {
         let viewController = viewControllerForStoryboardId("MenuTVC")
         
@@ -161,6 +166,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func toggleLeftDrawer(sender:AnyObject, animated:Bool) {
+        if UIApplication.sharedApplication().statusBarStyle == .LightContent {
+            UIApplication.sharedApplication().statusBarStyle = .Default
+        } else {
+            UIApplication.sharedApplication().statusBarStyle = .LightContent
+        }
         _drawerViewController?.toggleDrawer(.Left, animated: true, complete: { (finished) -> Void in
             // do nothing
         })
@@ -173,6 +183,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private var _centerViewController: UIViewController?
+    
     var centerViewController: UIViewController {
         get {
             if let viewController = _centerViewController {
