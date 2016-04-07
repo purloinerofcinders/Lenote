@@ -160,7 +160,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func menuViewController() -> UIViewController {
-        let viewController = viewControllerForStoryboardId("MenuTVC")
+        let viewController = viewControllerForStoryboardId("MenuVC")
         
         return viewController
     }
