@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import KGFloatingDrawer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,12 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        window?.rootViewController = drawerViewController
-        
-        window?.makeKeyAndVisible()
-        
         return true
     }
 
@@ -109,96 +102,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()
             }
-        }
-    }
-    
-    private var _drawerViewController: KGDrawerViewController?
-    var drawerViewController: KGDrawerViewController {
-        get {
-            if let viewController = _drawerViewController {
-                return viewController
-            }
-            return prepareDrawerViewController()
-        }
-    }
-    
-    func prepareDrawerViewController() -> KGDrawerViewController {
-        let drawerViewController = KGDrawerViewController()
-        
-        drawerViewController.centerViewController = foldersViewController()
-        drawerViewController.leftViewController = menuViewController()
-        drawerViewController.animator.springDamping = 5
-        drawerViewController.animator.animationDuration = 0.4
-        drawerViewController.backgroundImage = UIImage(named: "Background.jpg")
-        
-        _drawerViewController = drawerViewController
-        
-        return drawerViewController
-    }
-    
-    private func drawerStoryboard() -> UIStoryboard {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        return storyboard
-    }
-    
-    private func viewControllerForStoryboardId(storyboardId: String) -> UIViewController {
-        let viewController: UIViewController = drawerStoryboard().instantiateViewControllerWithIdentifier(storyboardId)
-        return viewController
-    }
-    
-    func foldersViewController() -> UIViewController {
-        let viewController = viewControllerForStoryboardId("FoldersTVC")
-        
-        return viewController
-    }
-    
-    func settingsViewController() -> UIViewController {
-        let viewController = viewControllerForStoryboardId("SettingsTVC")
-        
-        return viewController
-    }
-    
-    private func menuViewController() -> UIViewController {
-        let viewController = viewControllerForStoryboardId("MenuVC")
-        
-        return viewController
-    }
-    
-    func toggleLeftDrawer(sender:AnyObject, animated:Bool) {
-        if UIApplication.sharedApplication().statusBarStyle == .LightContent {
-            UIApplication.sharedApplication().statusBarStyle = .Default
-        } else {
-            UIApplication.sharedApplication().statusBarStyle = .LightContent
-        }
-        _drawerViewController?.toggleDrawer(.Left, animated: true, complete: { (finished) -> Void in
-            // do nothing
-        })
-    }
-    
-    func toggleRightDrawer(sender:AnyObject, animated:Bool) {
-        _drawerViewController?.toggleDrawer(.Right, animated: true, complete: { (finished) -> Void in
-            // do nothing
-        })
-    }
-    
-    private var _centerViewController: UIViewController?
-    
-    var centerViewController: UIViewController {
-        get {
-            if let viewController = _centerViewController {
-                return viewController
-            }
-            return foldersViewController()
-        }
-        set {
-            if let drawerViewController = _drawerViewController {
-                drawerViewController.closeDrawer(drawerViewController.currentlyOpenedSide, animated: true) { finished in }
-                if drawerViewController.centerViewController != newValue {
-                    drawerViewController.centerViewController = newValue
-                }
-            }
-            _centerViewController = newValue
         }
     }
 }

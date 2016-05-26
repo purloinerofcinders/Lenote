@@ -7,7 +7,6 @@ target 'Lenote' do
 
 pod 'MGSwipeTableCell', '~> 1.5.4'
 pod 'SwiftDate', '~> 3.0.8'
-pod 'KGFloatingDrawer', '~> 0.2.0'
 pod 'LKAlertController', '~> 1.7.0'
 
 end

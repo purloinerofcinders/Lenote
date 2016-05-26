@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="o0P-hP-2sY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="o0P-hP-2sY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,79 +22,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4m-Gw-Jgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="182" y="393"/>
-        </scene>
-        <!--MenuVC-->
-        <scene sceneID="ZzQ-O0-2kx">
-            <objects>
-                <viewController storyboardIdentifier="MenuVC" id="UIa-Je-YJG" customClass="MenuVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D3V-lb-Q2e"/>
-                        <viewControllerLayoutGuide type="bottom" id="dF6-6K-nNL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ryn-Jl-r3i">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5q-Yy-zS8">
-                                <rect key="frame" x="38" y="57" width="103" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="      Profile" image="Profile.png"/>
-                                <connections>
-                                    <action selector="pressProfile:" destination="UIa-Je-YJG" eventType="touchUpInside" id="pAc-4I-3e3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF6-2G-nw1">
-                                <rect key="frame" x="36" y="119" width="119" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="     Settings" image="Settings.png"/>
-                                <connections>
-                                    <action selector="pressSettings:" destination="UIa-Je-YJG" eventType="touchUpInside" id="OGw-Rz-gTG"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O3h-pn-Qzd">
-                                <rect key="frame" x="0.0" y="231" width="247" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" text="" id="SJ9-MF-bcx">
-                                    <rect key="frame" x="0.0" y="0.0" width="247" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wg5-hN-8fS">
-                                        <rect key="frame" x="0.0" y="72" width="247" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wg5-hN-8fS" id="AKr-Tp-oyQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="247" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="UIa-Je-YJG" id="hOf-Ec-fXZ"/>
-                                    <outlet property="delegate" destination="UIa-Je-YJG" id="ILV-Wq-ORV"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUP-xv-MJG">
-                                <rect key="frame" x="15" y="203" width="118" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="    New Folder" image="NewFolder.png">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.85684481534090906" colorSpace="calibratedWhite"/>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="500"/>
-                    <connections>
-                        <outlet property="searchBar" destination="SJ9-MF-bcx" id="83I-QC-BCr"/>
-                        <outlet property="tableView" destination="O3h-pn-Qzd" id="u7r-Bm-8xn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u85-zw-6RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="582" y="-313"/>
         </scene>
         <!--FoldersTVC-->
         <scene sceneID="l8j-6F-h9x">
@@ -157,11 +84,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="tuc-SQ-OGG">
-                        <barButtonItem key="leftBarButtonItem" image="Menu.png" id="D2B-9b-zAc">
-                            <connections>
-                                <action selector="pressMenu:" destination="6eN-Xn-Bmb" id="hzP-T8-gGC"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="NewFolder.png" id="uJU-1s-f1L">
                             <connections>
                                 <action selector="pressNewFolder:" destination="6eN-Xn-Bmb" id="dYC-Lt-qCL"/>
@@ -178,63 +100,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1I0-FY-iy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778" y="393"/>
-        </scene>
-        <!--SettingsTVC-->
-        <scene sceneID="TkT-4w-zwq">
-            <objects>
-                <tableViewController id="cBS-bY-SDD" customClass="SettingsTVC" customModule="Lenote" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="LXb-23-ieD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <sections>
-                            <tableViewSection headerTitle="General" id="3E8-lC-i4g">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RPb-N6-sfG">
-                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RPb-N6-sfG" id="tYc-6V-VcN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DN2-oP-faU">
-                                        <rect key="frame" x="0.0" y="158" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DN2-oP-faU" id="Sw6-pF-bfw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="br1-pM-Kyb">
-                                        <rect key="frame" x="0.0" y="202" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="br1-pM-Kyb" id="sjG-XZ-R2u">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="cBS-bY-SDD" id="q8m-ya-hpf"/>
-                            <outlet property="delegate" destination="cBS-bY-SDD" id="z8T-9X-Rpq"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="3Np-jZ-SKc">
-                        <barButtonItem key="leftBarButtonItem" image="Menu.png" id="N6s-qa-aKi">
-                            <connections>
-                                <action selector="pressMenu:" destination="cBS-bY-SDD" id="96t-op-tap"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="500"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eai-Fb-rAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="778" y="1068"/>
         </scene>
         <!--FolderTVC-->
         <scene sceneID="a2v-56-J29">
@@ -514,32 +379,9 @@
             </objects>
             <point key="canvasLocation" x="2420" y="-119"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jBm-EA-RoW">
-            <objects>
-                <navigationController storyboardIdentifier="SettingsTVC" automaticallyAdjustsScrollViewInsets="NO" id="J6N-7G-qxH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="500"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ih0-Jd-mo9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cBS-bY-SDD" kind="relationship" relationship="rootViewController" id="NwS-Dr-chR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DaZ-oc-epr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="182" y="1068"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Menu.png" width="24" height="14"/>
         <image name="NewFolder.png" width="24" height="20"/>
         <image name="NewItem.png" width="20" height="20"/>
-        <image name="Profile.png" width="27" height="32"/>
-        <image name="Settings.png" width="33" height="29"/>
     </resources>
 </document>

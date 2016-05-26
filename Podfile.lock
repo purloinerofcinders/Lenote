@@ -1,19 +1,16 @@
 PODS:
-  - KGFloatingDrawer (0.2.0)
   - LKAlertController (1.7.0)
-  - MGSwipeTableCell (1.5.4)
+  - MGSwipeTableCell (1.5.5)
   - SwiftDate (3.0.8)
 
 DEPENDENCIES:
-  - KGFloatingDrawer (~> 0.2.0)
   - LKAlertController (~> 1.7.0)
   - MGSwipeTableCell (~> 1.5.4)
   - SwiftDate (~> 3.0.8)
 
 SPEC CHECKSUMS:
-  KGFloatingDrawer: b0c2810954bfb61f4d4dd01b8891d5c23933e368
   LKAlertController: 2d34a1df7bffbf23c888e11d391a7b76a237443e
-  MGSwipeTableCell: cffd3378af74eb991911f132c5f3911261fda860
+  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
   SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
 
 COCOAPODS: 0.39.0

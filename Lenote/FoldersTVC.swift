@@ -131,11 +131,6 @@ class FoldersTVC: UITableViewController, UISearchBarDelegate, UITextFieldDelegat
     }
     
     //MARK: - Event Handlers
-    @IBAction func pressMenu(sender: UIBarButtonItem) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.toggleLeftDrawer(sender, animated: false)
-    }
-    
     @IBAction func pressNewFolder(sender: UIBarButtonItem) {
         var textField = UITextField()
         textField.placeholder = "Name"
