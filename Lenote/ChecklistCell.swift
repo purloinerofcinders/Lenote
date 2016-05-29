@@ -1,19 +1,21 @@
 //
-//  FolderCell.swift
+//  ChecklistCell.swift
 //  Lenote
 //
-//  Created by Wallace Toh on 23/3/16.
+//  Created by Wallace Toh on 28/5/16.
 //  Copyright © 2016 Wallace Toh. All rights reserved.
 //
 
 import UIKit
 
-class FolderCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailsLabel: UILabel!
+class ChecklistCell: UITableViewCell {
+    var checklist: Checklist?
+    
+    @IBOutlet weak var delete: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     override func setSelected(selected: Bool, animated: Bool) {

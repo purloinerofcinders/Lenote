@@ -1,5 +1,5 @@
 //
-//  FolderTVC.swift
+//  MainTVC.swift
 //  Lenote
 //
 //  Created by Wallace Toh on 26/3/16.
@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import LKAlertController
 
-class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate, UISearchBarDelegate {
+class MainTVC: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     
     let notesManager = NotesManager()
     
-    var folder: Folder?
     var notes = [AnyObject]()
     var note: Note?
     
@@ -23,14 +23,13 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(FolderTVC.didDismissNotesTypeTVC(_:)), name:"SelectedType", object: nil)
+        title = "LENOTE"
         
-        title = folder?.title
         tableView.contentOffset = CGPointMake(0, searchBar.frame.size.height)
         
         searchBar.delegate = self
         
-        notes = (folder?.notes?.allObjects)!
+        notes = notesManager.fetchNotes() as! [AnyObject]
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,6 +44,11 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
         view.endEditing(true)
     }
     
+    //MARK: - Options
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
     //MARK: - Tableview
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as! NoteCell
@@ -57,10 +61,12 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
             cell.titleLabel.text = notes[indexPath.row].title
         }
         
-        if (notes[indexPath.row] as! Note).content == "" {
-            cell.contentLabel.text = "No content"
+        let count = (notes[indexPath.row] as! Note).posts?.count
+        
+        if count == 0 {
+            cell.contentLabel.text = "No posts"
         } else {
-            cell.contentLabel.text = (notes[indexPath.row] as! Note).content
+            cell.contentLabel.text = String(format: "%i posts", count!)
         }
         
         return cell
@@ -95,51 +101,40 @@ class FolderTVC: UITableViewController, UIPopoverPresentationControllerDelegate,
         return notes.count
     }
     
-    //MARK: - Event Handlers
+    //MARK: - Button Events
     @IBAction func pressNewNote(sender: UIBarButtonItem) {
-        performSegueWithIdentifier("NoteTypes", sender: self)
+        var textField = UITextField()
+        textField.placeholder = "Name"
+        textField.font = textField.font?.fontWithSize(14)
+        textField.returnKeyType = .Done
+        
+        Alert(title: "New Note", message: "Enter a name for this note.")
+            .addAction("Cancel")
+            .addAction("Save", style: .Default, handler: { _ in
+                self.note = self.notesManager.createEmptyNoteWithTitle(textField.text!)
+                self.shouldBringUpKeyboard = true
+                
+                self.notes = self.notesManager.fetchNotes() as! [AnyObject]
+                
+                self.resignFirstResponder()
+                self.tableView.reloadData()
+                
+                self.performSegueWithIdentifier("Note", sender: self)
+            }).addTextField(&textField).show()
     }
     
+    //MARK: - Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Note" {
-            let destVC = segue.destinationViewController as! NoteTVC
+            let destVC = segue.destinationViewController as! NoteVC
             
             destVC.shouldBringUpKeyboard = shouldBringUpKeyboard
             destVC.note = note
-        } else if segue.identifier == "NoteTypes" {
-            let destVC = segue.destinationViewController
-            
-            destVC.modalPresentationStyle = UIModalPresentationStyle.Popover
-            destVC.popoverPresentationController!.delegate = self
-        }
-    }
-    
-    dynamic func didDismissNotesTypeTVC(notification: NSNotification) {
-        let noteType: Int = notification.object as! Int
-        
-        switch noteType {
-        case 0:
-            shouldBringUpKeyboard = true
-            
-            note = notesManager.createEmptyNoteInFolder(folder)
-            notes = notesManager.fetchNotesFromFolder(folder) as! [AnyObject]
-            
-            tableView.reloadData()
-            
-            performSegueWithIdentifier("Note", sender: self)
-            self.resignFirstResponder()
-        default:
-            break
         }
     }
     
     //MARK: - Searchbar
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-    }
-  
-    //MARK: - Misc
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.None
     }
 }

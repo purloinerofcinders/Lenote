@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="Checklist" syncable="YES">
-        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CItem" inverseName="checklist" inverseEntity="CItem" syncable="YES"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Checklist" representedClassName=".Checklist" syncable="YES">
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="checklist" inverseEntity="Post" syncable="YES"/>
     </entity>
-    <entity name="CItem" syncable="YES">
-        <attribute name="marked" optional="YES" attributeType="Boolean" syncable="YES"/>
+    <entity name="Entry" representedClassName=".Entry" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="checklist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Checklist" inverseName="item" inverseEntity="Checklist" syncable="YES"/>
-    </entity>
-    <entity name="Folder" representedClassName=".Folder" syncable="YES">
-        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="folder" inverseEntity="Note" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="entry" inverseEntity="Post" syncable="YES"/>
     </entity>
     <entity name="Note" representedClassName="Note" syncable="YES">
-        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="notes" inverseEntity="Folder" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="note" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <entity name="Post" representedClassName=".Post" syncable="YES">
+        <attribute name="createdDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="checklist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Checklist" inverseName="post" inverseEntity="Checklist" syncable="YES"/>
+        <relationship name="entry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entry" inverseName="post" inverseEntity="Entry" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="posts" inverseEntity="Note" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Folder" positionX="-63" positionY="-9" width="128" height="90"/>
-        <element name="Note" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Checklist" positionX="-54" positionY="18" width="128" height="90"/>
-        <element name="CItem" positionX="-45" positionY="27" width="128" height="90"/>
+        <element name="Entry" positionX="-54" positionY="36" width="128" height="90"/>
+        <element name="Note" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Post" positionX="-54" positionY="18" width="128" height="120"/>
+        <element name="Checklist" positionX="-54" positionY="36" width="128" height="60"/>
     </elements>
 </model>

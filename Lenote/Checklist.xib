@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChecklistCell" rowHeight="320" id="2Bu-35-sCJ" customClass="ChecklistCell" customModule="Lenote" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="320"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Bu-35-sCJ" id="Bjj-b9-qlf">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="319"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jh-KF-YyC">
+                        <rect key="frame" x="20" y="20" width="360" height="264"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-yI-gEH">
+                                <rect key="frame" x="0.0" y="213" width="360" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="E74-gJ-esM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqN-Cj-AY5">
+                                <rect key="frame" x="295" y="214" width="1" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="ryy-Yr-vym"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tp-02-pv6">
+                                <rect key="frame" x="295" y="213" width="65" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="JRF-yB-xyv"/>
+                                    <constraint firstAttribute="width" constant="65" id="kYR-WY-d44"/>
+                                </constraints>
+                                <state key="normal" image="Delete.png">
+                                    <color key="titleColor" red="1" green="0.43679997320000002" blue="0.43629783170000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHECKLIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-py-xWG">
+                                <rect key="frame" x="91" y="116" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zqN-Cj-AY5" secondAttribute="trailing" constant="64" id="Atb-xK-uy0"/>
+                            <constraint firstAttribute="bottom" secondItem="LaV-yI-gEH" secondAttribute="bottom" constant="50" id="IAl-kd-l2w"/>
+                            <constraint firstItem="zqN-Cj-AY5" firstAttribute="top" secondItem="8jh-KF-YyC" secondAttribute="top" constant="214" id="Yt7-UH-Xpc"/>
+                            <constraint firstItem="LaV-yI-gEH" firstAttribute="leading" secondItem="8jh-KF-YyC" secondAttribute="leading" id="ana-Dz-B9i"/>
+                            <constraint firstAttribute="trailing" secondItem="LaV-yI-gEH" secondAttribute="trailing" id="pKH-2a-UG1"/>
+                            <constraint firstAttribute="bottom" secondItem="0tp-02-pv6" secondAttribute="bottom" id="qEE-Me-gNn"/>
+                            <constraint firstAttribute="bottom" secondItem="zqN-Cj-AY5" secondAttribute="bottom" id="uFF-c4-YES"/>
+                            <constraint firstAttribute="trailing" secondItem="0tp-02-pv6" secondAttribute="trailing" id="zdL-Fd-7Ve"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27th May 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEI-b8-D2R">
+                        <rect key="frame" x="308" y="292" width="72" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="8jh-KF-YyC" firstAttribute="leading" secondItem="Bjj-b9-qlf" secondAttribute="leading" constant="20" id="8f0-78-MSj"/>
+                    <constraint firstAttribute="trailing" secondItem="8jh-KF-YyC" secondAttribute="trailing" constant="20" id="TYv-yM-uGE"/>
+                    <constraint firstItem="8jh-KF-YyC" firstAttribute="top" secondItem="Bjj-b9-qlf" secondAttribute="top" constant="20" id="ksH-w0-fvq"/>
+                    <constraint firstAttribute="bottom" secondItem="HEI-b8-D2R" secondAttribute="bottom" constant="15" id="p1H-bS-apv"/>
+                    <constraint firstAttribute="bottom" secondItem="8jh-KF-YyC" secondAttribute="bottom" constant="35" id="qxb-Mb-vYX"/>
+                    <constraint firstAttribute="trailing" secondItem="HEI-b8-D2R" secondAttribute="trailing" constant="20" id="sNP-Wm-7Iv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="delete" destination="0tp-02-pv6" id="gKX-bK-J5I"/>
+            </connections>
+            <point key="canvasLocation" x="285" y="324"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Delete.png" width="18" height="24"/>
+    </resources>
+</document>

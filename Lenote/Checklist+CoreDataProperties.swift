@@ -1,8 +1,8 @@
 //
-//  Note+CoreDataProperties.swift
+//  Checklist+CoreDataProperties.swift
 //  Lenote
 //
-//  Created by Wallace Toh on 27/5/16.
+//  Created by Wallace Toh on 28/5/16.
 //  Copyright © 2016 Wallace Toh. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,10 +12,8 @@
 import Foundation
 import CoreData
 
-extension Note {
+extension Checklist {
 
-    @NSManaged var title: String?
-    @NSManaged var createdDate: NSDate?
-    @NSManaged var posts: NSSet?
+    @NSManaged var post: Post?
 
 }

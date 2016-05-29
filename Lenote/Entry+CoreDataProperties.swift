@@ -1,8 +1,8 @@
 //
-//  Folder+CoreDataProperties.swift
+//  Entry+CoreDataProperties.swift
 //  Lenote
 //
-//  Created by Wallace Toh on 29/3/16.
+//  Created by Wallace Toh on 27/5/16.
 //  Copyright © 2016 Wallace Toh. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,10 +12,10 @@
 import Foundation
 import CoreData
 
-extension Folder {
+extension Entry {
 
     @NSManaged var title: String?
-    @NSManaged var createdDate: NSDate?
-    @NSManaged var notes: NSSet?
+    @NSManaged var content: String?
+    @NSManaged var post: Post?
 
 }
