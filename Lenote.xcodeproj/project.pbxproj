@@ -20,6 +20,16 @@
 		BA06D9C51CADF8000061CE4D /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BA06D9C21CADF8000061CE4D /* Settings.png */; };
 		BA06D9C61CADF8000061CE4D /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA06D9C31CADF8000061CE4D /* Settings@2x.png */; };
 		BA06D9C71CADF8000061CE4D /* Settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA06D9C41CADF8000061CE4D /* Settings@3x.png */; };
+		BA4475EF1D01539300CA0EBD /* Fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475EC1D01539300CA0EBD /* Fullscreen.png */; };
+		BA4475F01D01539300CA0EBD /* Fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475ED1D01539300CA0EBD /* Fullscreen@2x.png */; };
+		BA4475F11D01539300CA0EBD /* Fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475EE1D01539300CA0EBD /* Fullscreen@3x.png */; };
+		BA4475F41D015CD000CA0EBD /* ChecklistItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4475F21D015CD000CA0EBD /* ChecklistItem+CoreDataProperties.swift */; };
+		BA4475F51D015CD000CA0EBD /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4475F31D015CD000CA0EBD /* ChecklistItem.swift */; };
+		BA4475F81D01737B00CA0EBD /* Checklist+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4475F61D01737B00CA0EBD /* Checklist+CoreDataProperties.swift */; };
+		BA4475F91D01737B00CA0EBD /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4475F71D01737B00CA0EBD /* Checklist.swift */; };
+		BA4475FD1D01C1E800CA0EBD /* Comments.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475FA1D01C1E800CA0EBD /* Comments.png */; };
+		BA4475FE1D01C1E800CA0EBD /* Comments@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475FB1D01C1E800CA0EBD /* Comments@2x.png */; };
+		BA4475FF1D01C1E800CA0EBD /* Comments@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475FC1D01C1E800CA0EBD /* Comments@3x.png */; };
 		BA4C97D11CA2B71500FDEAF9 /* NewNote.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4C97CE1CA2B71500FDEAF9 /* NewNote.png */; };
 		BA4C97D21CA2B71500FDEAF9 /* NewNote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4C97CF1CA2B71500FDEAF9 /* NewNote@2x.png */; };
 		BA4C97D31CA2B71500FDEAF9 /* NewNote@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4C97D01CA2B71500FDEAF9 /* NewNote@3x.png */; };
@@ -46,14 +56,14 @@
 		BAFD2BD81CF9D96E0097BB75 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFD2BD51CF9D96E0097BB75 /* Delete.png */; };
 		BAFD2BD91CF9D96E0097BB75 /* Delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFD2BD61CF9D96E0097BB75 /* Delete@2x.png */; };
 		BAFD2BDA1CF9D96E0097BB75 /* Delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFD2BD71CF9D96E0097BB75 /* Delete@3x.png */; };
-		BAFD2BDD1CF9E4200097BB75 /* Checklist+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD2BDB1CF9E4200097BB75 /* Checklist+CoreDataProperties.swift */; };
-		BAFD2BDE1CF9E4200097BB75 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD2BDC1CF9E4200097BB75 /* Checklist.swift */; };
 		BAFD2BE11CF9E4720097BB75 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD2BDF1CF9E4720097BB75 /* Post+CoreDataProperties.swift */; };
 		BAFD2BE21CF9E4720097BB75 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD2BE01CF9E4720097BB75 /* Post.swift */; };
 		BAFD2BE41CF9E5010097BB75 /* ChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD2BE31CF9E5010097BB75 /* ChecklistCell.swift */; };
 		BAFD2BE61CF9E5370097BB75 /* Checklist.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFD2BE51CF9E5370097BB75 /* Checklist.xib */; };
 		BAFEB7EE1CA608F900B394EF /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEB7ED1CA608F900B394EF /* MainTVC.swift */; };
 		BAFEB7F11CA60CAC00B394EF /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEB7F01CA60CAC00B394EF /* NoteCell.swift */; };
+		BAFF8FA41CFD22970059A8BA /* ChecklistItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF8FA31CFD22970059A8BA /* ChecklistItemCell.swift */; };
+		BAFF8FA61CFD22CF0059A8BA /* ChecklistItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFF8FA51CFD22CF0059A8BA /* ChecklistItem.xib */; };
 		BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99501CA1618200FD12F7 /* AppDelegate.swift */; };
 		BAFF99561CA1618200FD12F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFF99541CA1618200FD12F7 /* Main.storyboard */; };
 		BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAFF99571CA1618200FD12F7 /* Lenote.xcdatamodeld */; };
@@ -94,6 +104,16 @@
 		BA06D9C21CADF8000061CE4D /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Settings.png; path = Resources/Settings.png; sourceTree = "<group>"; };
 		BA06D9C31CADF8000061CE4D /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings@2x.png"; path = "Resources/Settings@2x.png"; sourceTree = "<group>"; };
 		BA06D9C41CADF8000061CE4D /* Settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings@3x.png"; path = "Resources/Settings@3x.png"; sourceTree = "<group>"; };
+		BA4475EC1D01539300CA0EBD /* Fullscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fullscreen.png; path = Resources/Fullscreen.png; sourceTree = "<group>"; };
+		BA4475ED1D01539300CA0EBD /* Fullscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fullscreen@2x.png"; path = "Resources/Fullscreen@2x.png"; sourceTree = "<group>"; };
+		BA4475EE1D01539300CA0EBD /* Fullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fullscreen@3x.png"; path = "Resources/Fullscreen@3x.png"; sourceTree = "<group>"; };
+		BA4475F21D015CD000CA0EBD /* ChecklistItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChecklistItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA4475F31D015CD000CA0EBD /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		BA4475F61D01737B00CA0EBD /* Checklist+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Checklist+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA4475F71D01737B00CA0EBD /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		BA4475FA1D01C1E800CA0EBD /* Comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Comments.png; path = Resources/Comments.png; sourceTree = "<group>"; };
+		BA4475FB1D01C1E800CA0EBD /* Comments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Comments@2x.png"; path = "Resources/Comments@2x.png"; sourceTree = "<group>"; };
+		BA4475FC1D01C1E800CA0EBD /* Comments@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Comments@3x.png"; path = "Resources/Comments@3x.png"; sourceTree = "<group>"; };
 		BA4C97CE1CA2B71500FDEAF9 /* NewNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewNote.png; path = Resources/NewNote.png; sourceTree = "<group>"; };
 		BA4C97CF1CA2B71500FDEAF9 /* NewNote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NewNote@2x.png"; path = "Resources/NewNote@2x.png"; sourceTree = "<group>"; };
 		BA4C97D01CA2B71500FDEAF9 /* NewNote@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NewNote@3x.png"; path = "Resources/NewNote@3x.png"; sourceTree = "<group>"; };
@@ -121,14 +141,14 @@
 		BAFD2BD51CF9D96E0097BB75 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Delete.png; path = Resources/Delete.png; sourceTree = "<group>"; };
 		BAFD2BD61CF9D96E0097BB75 /* Delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Delete@2x.png"; path = "Resources/Delete@2x.png"; sourceTree = "<group>"; };
 		BAFD2BD71CF9D96E0097BB75 /* Delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Delete@3x.png"; path = "Resources/Delete@3x.png"; sourceTree = "<group>"; };
-		BAFD2BDB1CF9E4200097BB75 /* Checklist+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Checklist+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BAFD2BDC1CF9E4200097BB75 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		BAFD2BDF1CF9E4720097BB75 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BAFD2BE01CF9E4720097BB75 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BAFD2BE31CF9E5010097BB75 /* ChecklistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistCell.swift; sourceTree = "<group>"; };
 		BAFD2BE51CF9E5370097BB75 /* Checklist.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Checklist.xib; sourceTree = "<group>"; };
 		BAFEB7ED1CA608F900B394EF /* MainTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		BAFEB7F01CA60CAC00B394EF /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		BAFF8FA31CFD22970059A8BA /* ChecklistItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItemCell.swift; sourceTree = "<group>"; };
+		BAFF8FA51CFD22CF0059A8BA /* ChecklistItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChecklistItem.xib; sourceTree = "<group>"; };
 		BAFF994D1CA1618200FD12F7 /* Lenote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lenote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFF99501CA1618200FD12F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAFF99551CA1618200FD12F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -198,8 +218,10 @@
 				BA83AF001CF8A637009135F9 /* Note.swift */,
 				BA83AF011CF8A637009135F9 /* Entry+CoreDataProperties.swift */,
 				BA83AF021CF8A637009135F9 /* Entry.swift */,
-				BAFD2BDB1CF9E4200097BB75 /* Checklist+CoreDataProperties.swift */,
-				BAFD2BDC1CF9E4200097BB75 /* Checklist.swift */,
+				BA4475F61D01737B00CA0EBD /* Checklist+CoreDataProperties.swift */,
+				BA4475F71D01737B00CA0EBD /* Checklist.swift */,
+				BA4475F21D015CD000CA0EBD /* ChecklistItem+CoreDataProperties.swift */,
+				BA4475F31D015CD000CA0EBD /* ChecklistItem.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -216,6 +238,12 @@
 		BA86854A1CA1F1770025CE94 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BA4475FA1D01C1E800CA0EBD /* Comments.png */,
+				BA4475FB1D01C1E800CA0EBD /* Comments@2x.png */,
+				BA4475FC1D01C1E800CA0EBD /* Comments@3x.png */,
+				BA4475EC1D01539300CA0EBD /* Fullscreen.png */,
+				BA4475ED1D01539300CA0EBD /* Fullscreen@2x.png */,
+				BA4475EE1D01539300CA0EBD /* Fullscreen@3x.png */,
 				BAFD2BD51CF9D96E0097BB75 /* Delete.png */,
 				BAFD2BD61CF9D96E0097BB75 /* Delete@2x.png */,
 				BAFD2BD71CF9D96E0097BB75 /* Delete@3x.png */,
@@ -258,6 +286,8 @@
 				BA83AEF51CF86D75009135F9 /* Entry.xib */,
 				BAFD2BE31CF9E5010097BB75 /* ChecklistCell.swift */,
 				BAFD2BE51CF9E5370097BB75 /* Checklist.xib */,
+				BAFF8FA31CFD22970059A8BA /* ChecklistItemCell.swift */,
+				BAFF8FA51CFD22CF0059A8BA /* ChecklistItem.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -434,16 +464,20 @@
 				BA06D9C51CADF8000061CE4D /* Settings.png in Resources */,
 				BAFB1AB61CAD6CDA00019A61 /* Menu.png in Resources */,
 				BA06D9C11CADF63F0061CE4D /* Profile@3x.png in Resources */,
+				BA4475F11D01539300CA0EBD /* Fullscreen@3x.png in Resources */,
 				BA83AEF61CF86D75009135F9 /* Entry.xib in Resources */,
+				BA4475FD1D01C1E800CA0EBD /* Comments.png in Resources */,
 				BAFF995E1CA1618200FD12F7 /* LaunchScreen.storyboard in Resources */,
 				BAFC5A8E1CAEBD3F001702C6 /* NewItem@2x.png in Resources */,
 				BA06D9C01CADF63F0061CE4D /* Profile@2x.png in Resources */,
 				BAFF995B1CA1618200FD12F7 /* Assets.xcassets in Resources */,
 				BA06D9BF1CADF63F0061CE4D /* Profile.png in Resources */,
+				BA4475FF1D01C1E800CA0EBD /* Comments@3x.png in Resources */,
 				BAFC5A8F1CAEBD3F001702C6 /* NewItem@3x.png in Resources */,
 				BAFBE0681CA45BA10046E752 /* NewFolder@2x.png in Resources */,
 				BAFF99561CA1618200FD12F7 /* Main.storyboard in Resources */,
 				BAFD2BDA1CF9D96E0097BB75 /* Delete@3x.png in Resources */,
+				BA4475EF1D01539300CA0EBD /* Fullscreen.png in Resources */,
 				BA06D9C71CADF8000061CE4D /* Settings@3x.png in Resources */,
 				BAFB1AB81CAD6CDA00019A61 /* Menu@3x.png in Resources */,
 				BA83AEFB1CF87B40009135F9 /* DismissKeyboard@2x.png in Resources */,
@@ -459,9 +493,12 @@
 				BAFD2BD91CF9D96E0097BB75 /* Delete@2x.png in Resources */,
 				BA4C97D31CA2B71500FDEAF9 /* NewNote@3x.png in Resources */,
 				BAFBE0671CA45BA10046E752 /* NewFolder.png in Resources */,
+				BA4475F01D01539300CA0EBD /* Fullscreen@2x.png in Resources */,
 				BA06D9B41CADF4730061CE4D /* Folder@2x.png in Resources */,
 				BA06ADDB1CA347830059E6A8 /* AppIcon@2x.png in Resources */,
 				BA83AEFA1CF87B40009135F9 /* DismissKeyboard.png in Resources */,
+				BAFF8FA61CFD22CF0059A8BA /* ChecklistItem.xib in Resources */,
+				BA4475FE1D01C1E800CA0EBD /* Comments@2x.png in Resources */,
 				BA06ADDC1CA347830059E6A8 /* AppIcon@3x.png in Resources */,
 				BA06D9AF1CADF19F0061CE4D /* Background.jpg in Resources */,
 				BA06D9B31CADF4730061CE4D /* Folder.png in Resources */,
@@ -539,20 +576,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFEB7F11CA60CAC00B394EF /* NoteCell.swift in Sources */,
+				BA4475F51D015CD000CA0EBD /* ChecklistItem.swift in Sources */,
 				BA83AF081CF8A637009135F9 /* Entry.swift in Sources */,
 				BAFA05F81CA87C9300B0005F /* NoteVC.swift in Sources */,
 				BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */,
-				BAFD2BDE1CF9E4200097BB75 /* Checklist.swift in Sources */,
 				BA8685381CA1E1770025CE94 /* Classes.swift in Sources */,
-				BAFD2BDD1CF9E4200097BB75 /* Checklist+CoreDataProperties.swift in Sources */,
 				BAFF99591CA1618200FD12F7 /* Lenote.xcdatamodeld in Sources */,
+				BAFF8FA41CFD22970059A8BA /* ChecklistItemCell.swift in Sources */,
 				BAFD2BE41CF9E5010097BB75 /* ChecklistCell.swift in Sources */,
 				BA83AF071CF8A637009135F9 /* Entry+CoreDataProperties.swift in Sources */,
 				BAFD2BE21CF9E4720097BB75 /* Post.swift in Sources */,
 				BA83AF061CF8A637009135F9 /* Note.swift in Sources */,
+				BA4475F81D01737B00CA0EBD /* Checklist+CoreDataProperties.swift in Sources */,
+				BA4475F41D015CD000CA0EBD /* ChecklistItem+CoreDataProperties.swift in Sources */,
 				BAFEB7EE1CA608F900B394EF /* MainTVC.swift in Sources */,
 				BAFD2BE11CF9E4720097BB75 /* Post+CoreDataProperties.swift in Sources */,
 				BA83AEF41CF85CED009135F9 /* EntryCell.swift in Sources */,
+				BA4475F91D01737B00CA0EBD /* Checklist.swift in Sources */,
 				BA83AF051CF8A637009135F9 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

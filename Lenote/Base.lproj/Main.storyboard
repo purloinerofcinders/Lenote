@@ -108,9 +108,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-fL-biU">
+                            <tableView clipsSubviews="YES" tag="-1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-fL-biU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2ym-Nw-AAW" id="7v2-Bw-5yX"/>
                                     <outlet property="delegate" destination="2ym-Nw-AAW" id="vMA-cf-H7I"/>
@@ -139,7 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ui3-WF-1HX">
                         <rightBarButtonItems>
-                            <barButtonItem image="NewItem.png" id="fDk-kA-xZx">
+                            <barButtonItem image="NewNote.png" id="fDk-kA-xZx">
                                 <connections>
                                     <action selector="pressNew:" destination="2ym-Nw-AAW" id="GbP-WE-al1"/>
                                 </connections>
@@ -168,6 +168,7 @@
     <resources>
         <image name="DismissKeyboard.png" width="24" height="20"/>
         <image name="NewItem.png" width="20" height="20"/>
+        <image name="NewNote.png" width="22" height="22"/>
         <image name="Settings.png" width="20" height="22"/>
     </resources>
 </document>

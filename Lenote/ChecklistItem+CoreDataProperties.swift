@@ -1,5 +1,5 @@
 //
-//  Checklist+CoreDataProperties.swift
+//  ChecklistItem+CoreDataProperties.swift
 //  Lenote
 //
 //  Created by Wallace Toh on 3/6/16.
@@ -12,9 +12,9 @@
 import Foundation
 import CoreData
 
-extension Checklist {
+extension ChecklistItem {
 
-    @NSManaged var post: Post?
-    @NSManaged var items: NSSet?
+    @NSManaged var title: String?
+    @NSManaged var checklist: Checklist?
 
 }

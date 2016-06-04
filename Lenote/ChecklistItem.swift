@@ -1,5 +1,5 @@
 //
-//  Checklist.swift
+//  ChecklistItem.swift
 //  Lenote
 //
 //  Created by Wallace Toh on 3/6/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Checklist: NSManagedObject {
+class ChecklistItem: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

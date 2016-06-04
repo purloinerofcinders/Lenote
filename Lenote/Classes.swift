@@ -27,7 +27,7 @@ class NotesManager {
         do {
             try managedContext.save()
         } catch {
-            fatalError("Failure to save context: \(error)")
+            fatalError("Failed to save context with error: \(error)")
         }
     }
     
@@ -39,36 +39,25 @@ class NotesManager {
             managedContext.deleteObject(noteObject)
         }
         
-        do {
-            try managedContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        saveContext()
     }
     
     //MARK: - Note Setters
-    func createEmptyNoteWithTitle(title: String) -> Note {
+    func createNoteWithTitle(title: String) -> Note {
         let note = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext:managedContext) as! Note
         
         note.title = title
         note.createdDate = NSDate()
         
-        do {
-            try managedContext.save()
-            return note
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        saveContext()
+        
+        return note
     }
     
     func saveNote(note: Note!, title: String, content: String) {
         note.title = title
         
-        do {
-            try managedContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        saveContext()
     }
     
     func deleteNote(note: Note!) {
@@ -84,11 +73,7 @@ class NotesManager {
         
         managedContext.deleteObject(noteObject)
         
-        do {
-            try managedContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        saveContext()
     }
     
     func deleteAllNotes() {
@@ -99,7 +84,7 @@ class NotesManager {
         do {
             fetchedNotes = try context.executeFetchRequest(fetchRequest) as! [Note]
         } catch {
-            fatalError("Failure to save context: \(error)")
+            fatalError("Failed to fetch with error: \(error)")
         }
         
         for note in fetchedNotes {
@@ -107,11 +92,7 @@ class NotesManager {
             managedContext.deleteObject(noteObject)
         }
         
-        do {
-            try managedContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        saveContext()
     }
     
     //MARK: - Note Getters
@@ -124,7 +105,7 @@ class NotesManager {
             
             return fetchedNotes
         } catch {
-            fatalError("Failure to save context: \(error)")
+            fatalError("Failed to fetch with error: \(error)")
         }
     }
     
@@ -160,11 +141,7 @@ class NotesManager {
             break
         }
         
-        do {
-            try managedContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        saveContext()
     }
     
     func deletePost(post: Post, type: NSInteger) {
@@ -188,11 +165,33 @@ class NotesManager {
         
         managedContext.deleteObject(postObject)
         
-        do {
-            try managedContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
+        saveContext()
+    }
+    
+    //MARK: - Checklist Setters
+    func createItemInChecklist(checklist: Checklist) {
+        let item = NSEntityDescription.insertNewObjectForEntityForName("ChecklistItem", inManagedObjectContext:managedContext) as! ChecklistItem
+        
+        item.title = ""
+        item.checklist = checklist
+        
+        saveContext()
+    }
+    
+    func updateItemTitle(item: ChecklistItem, title: String) {
+        item.title = title
+        
+        saveContext()
+    }
+    
+    //MARK: - Checklist Getters
+    func fetchItemsInChecklist(checklist: Checklist) -> NSArray {
+        let fetchedItems = checklist.items
+        
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        let sortedItems = fetchedItems?.sortedArrayUsingDescriptors([sortDescriptor])
+        
+        return sortedItems!
     }
     
     //MARK: - Debugging
@@ -205,7 +204,7 @@ class NotesManager {
             
             print(String(format:"Notes: %i", fetchedNotes.count))
         } catch {
-            fatalError("Failure to save context: \(error)")
+            fatalError("Failed to fetch with error: \(error)")
         }
         
         fetchRequest = NSFetchRequest(entityName: "Post")
@@ -215,7 +214,7 @@ class NotesManager {
             
             print(String(format:"Posts: %i", fetchedPosts.count))
         } catch {
-            fatalError("Failure to save context: \(error)")
+            fatalError("Failed to fetch with error: \(error)")
         }
         
         fetchRequest = NSFetchRequest(entityName: "Entry")
@@ -225,7 +224,7 @@ class NotesManager {
             
             print(String(format:"Entries: %i", fetchedEntries.count))
         } catch {
-            fatalError("Failure to save context: \(error)")
+            fatalError("Failed to fetch with error: \(error)")
         }
         
         fetchRequest = NSFetchRequest(entityName: "Checklist")
@@ -235,8 +234,20 @@ class NotesManager {
             
             print(String(format:"Checklists: %i", fetchedChecklists.count))
         } catch {
-            fatalError("Failure to save context: \(error)")
+            fatalError("Failed to fetch with error: \(error)")
         }
+        
+        fetchRequest = NSFetchRequest(entityName: "ChecklistItem")
+        
+        do {
+            let fetchedChecklistItems = try context.executeFetchRequest(fetchRequest) as! [ChecklistItem]
+            
+            print(String(format:"Checklist Items: %i", fetchedChecklistItems.count))
+        } catch {
+            fatalError("Failed to fetch with error: \(error)")
+        }
+        
+        print("////////////////////////////////////////")
     }
 }
 

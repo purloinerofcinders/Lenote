@@ -23,7 +23,7 @@ class MainTVC: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "LENOTE"
+        title = "Home"
         
         tableView.contentOffset = CGPointMake(0, searchBar.frame.size.height)
         
@@ -111,7 +111,7 @@ class MainTVC: UITableViewController, UISearchBarDelegate {
         Alert(title: "New Note", message: "Enter a name for this note.")
             .addAction("Cancel")
             .addAction("Save", style: .Default, handler: { _ in
-                self.note = self.notesManager.createEmptyNoteWithTitle(textField.text!)
+                self.note = self.notesManager.createNoteWithTitle(textField.text!)
                 self.shouldBringUpKeyboard = true
                 
                 self.notes = self.notesManager.fetchNotes() as! [AnyObject]

@@ -18,9 +18,9 @@
                         <rect key="frame" x="20" y="20" width="360" height="264"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbf-0U-neb">
-                                <rect key="frame" x="15" y="15" width="297" height="21"/>
+                                <rect key="frame" x="15" y="0.0" width="297" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="hVq-c7-CZH"/>
+                                    <constraint firstAttribute="height" constant="45" id="hVq-c7-CZH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -56,22 +56,54 @@
                                     <color key="titleColor" red="1" green="0.43679997320000002" blue="0.43629783170000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2v-Ji-hNY">
+                                <rect key="frame" x="0.0" y="214" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dx3-ls-zUe">
+                                        <rect key="frame" x="230" y="0.0" width="65" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Wd5-FJ-1Qn"/>
+                                            <constraint firstAttribute="width" constant="65" id="pOC-UQ-4Dt"/>
+                                        </constraints>
+                                        <state key="normal" image="Fullscreen.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovs-Xr-sc3">
+                                        <rect key="frame" x="115" y="0.0" width="65" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="NDC-Pf-TIj"/>
+                                            <constraint firstAttribute="width" constant="65" id="kxF-qm-gPS"/>
+                                        </constraints>
+                                        <state key="normal" image="Comments.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ovs-Xr-sc3" firstAttribute="centerX" secondItem="y2v-Ji-hNY" secondAttribute="centerX" id="Dt9-96-pKW"/>
+                                    <constraint firstItem="ovs-Xr-sc3" firstAttribute="centerY" secondItem="y2v-Ji-hNY" secondAttribute="centerY" id="Keg-vU-how"/>
+                                    <constraint firstAttribute="height" constant="50" id="SKV-k5-uBr"/>
+                                    <constraint firstAttribute="bottom" secondItem="dx3-ls-zUe" secondAttribute="bottom" id="vKj-Jk-cZJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="dx3-ls-zUe" secondAttribute="trailing" id="weL-Xi-JOz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tbf-0U-neb" firstAttribute="top" secondItem="P6G-Ld-Izl" secondAttribute="top" constant="15" id="2xg-F0-Uyd"/>
+                            <constraint firstItem="Tbf-0U-neb" firstAttribute="top" secondItem="P6G-Ld-Izl" secondAttribute="top" id="2xg-F0-Uyd"/>
                             <constraint firstAttribute="bottom" secondItem="vdi-mq-cmB" secondAttribute="bottom" constant="69" id="7yc-Z1-7ph"/>
                             <constraint firstAttribute="trailing" secondItem="gc1-n6-dYF" secondAttribute="trailing" id="DGg-WZ-AJR"/>
                             <constraint firstItem="cZr-CI-deK" firstAttribute="leading" secondItem="P6G-Ld-Izl" secondAttribute="leading" id="LMo-yh-iTl"/>
                             <constraint firstItem="vdi-mq-cmB" firstAttribute="leading" secondItem="P6G-Ld-Izl" secondAttribute="leading" constant="10" id="Lrf-WG-0Nk"/>
+                            <constraint firstItem="gc1-n6-dYF" firstAttribute="leading" secondItem="y2v-Ji-hNY" secondAttribute="trailing" id="MaS-nk-1a1"/>
                             <constraint firstAttribute="bottom" secondItem="gc1-n6-dYF" secondAttribute="bottom" id="O8X-Qq-ugy"/>
+                            <constraint firstAttribute="bottom" secondItem="y2v-Ji-hNY" secondAttribute="bottom" id="QjE-eI-Gad"/>
                             <constraint firstAttribute="bottom" secondItem="cZr-CI-deK" secondAttribute="bottom" constant="50" id="S2j-iB-tKF"/>
                             <constraint firstAttribute="bottom" secondItem="Lw6-ow-GBU" secondAttribute="bottom" id="YFA-zK-4ey"/>
                             <constraint firstAttribute="trailing" secondItem="vdi-mq-cmB" secondAttribute="trailing" constant="48" id="YYm-6W-OH3"/>
                             <constraint firstAttribute="trailing" secondItem="Tbf-0U-neb" secondAttribute="trailing" constant="48" id="Z8D-qQ-Prb"/>
                             <constraint firstAttribute="trailing" secondItem="cZr-CI-deK" secondAttribute="trailing" id="bdT-fW-PLR"/>
-                            <constraint firstItem="vdi-mq-cmB" firstAttribute="top" secondItem="Tbf-0U-neb" secondAttribute="bottom" constant="8" id="dqf-3P-2JE"/>
+                            <constraint firstItem="vdi-mq-cmB" firstAttribute="top" secondItem="Tbf-0U-neb" secondAttribute="bottom" constant="-1" id="dqf-3P-2JE"/>
                             <constraint firstAttribute="trailing" secondItem="Lw6-ow-GBU" secondAttribute="trailing" constant="64" id="myq-Z3-IjI"/>
+                            <constraint firstItem="y2v-Ji-hNY" firstAttribute="leading" secondItem="P6G-Ld-Izl" secondAttribute="leading" id="v7h-dB-sFq"/>
                             <constraint firstItem="Tbf-0U-neb" firstAttribute="leading" secondItem="P6G-Ld-Izl" secondAttribute="leading" constant="15" id="vw1-2J-Aw6"/>
                             <constraint firstItem="Lw6-ow-GBU" firstAttribute="top" secondItem="P6G-Ld-Izl" secondAttribute="top" constant="214" id="wEE-UU-jXE"/>
                         </constraints>
@@ -100,10 +132,12 @@
                 <outlet property="infoLabel" destination="UtV-rc-NvY" id="CdK-Aj-xH8"/>
                 <outlet property="titleTextfield" destination="Tbf-0U-neb" id="Kry-dB-lFa"/>
             </connections>
-            <point key="canvasLocation" x="355" y="502"/>
+            <point key="canvasLocation" x="373" y="669"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Delete.png" width="18" height="24"/>
+        <image name="Comments.png" width="26" height="20"/>
+        <image name="Delete.png" width="18" height="25"/>
+        <image name="Fullscreen.png" width="20" height="21"/>
     </resources>
 </document>

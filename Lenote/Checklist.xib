@@ -19,14 +19,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-yI-gEH">
                                 <rect key="frame" x="0.0" y="213" width="360" height="1"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="E74-gJ-esM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqN-Cj-AY5">
                                 <rect key="frame" x="295" y="214" width="1" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="ryy-Yr-vym"/>
                                 </constraints>
@@ -41,19 +41,59 @@
                                     <color key="titleColor" red="1" green="0.43679997320000002" blue="0.43629783170000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHECKLIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-py-xWG">
-                                <rect key="frame" x="91" y="116" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sKR-rL-DhC">
+                                <rect key="frame" x="40" y="32" width="240" height="155"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTr-bX-kWG">
+                                <rect key="frame" x="0.0" y="214" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoz-l5-qhL">
+                                        <rect key="frame" x="115" y="0.0" width="65" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Xk9-oS-70G"/>
+                                            <constraint firstAttribute="width" constant="65" id="cIw-ei-rFF"/>
+                                        </constraints>
+                                        <state key="normal" image="Comments.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr8-Xv-zFj">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="akn-Va-bGa"/>
+                                            <constraint firstAttribute="height" constant="50" id="hV7-fD-SOw"/>
+                                        </constraints>
+                                        <state key="normal" image="NewItem.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGB-qB-Vhg">
+                                        <rect key="frame" x="230" y="0.0" width="65" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="Ba3-uU-xCl"/>
+                                            <constraint firstAttribute="height" constant="50" id="ovb-NY-INs"/>
+                                        </constraints>
+                                        <state key="normal" image="Fullscreen.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tr8-Xv-zFj" secondAttribute="bottom" id="Rtn-w8-syr"/>
+                                    <constraint firstAttribute="bottom" secondItem="FGB-qB-Vhg" secondAttribute="bottom" id="cOw-Xv-M4O"/>
+                                    <constraint firstItem="aoz-l5-qhL" firstAttribute="centerY" secondItem="TTr-bX-kWG" secondAttribute="centerY" id="i1H-gm-v2b"/>
+                                    <constraint firstAttribute="height" constant="50" id="i71-Xf-I1U"/>
+                                    <constraint firstItem="tr8-Xv-zFj" firstAttribute="leading" secondItem="TTr-bX-kWG" secondAttribute="leading" id="nw1-X9-wmx"/>
+                                    <constraint firstItem="aoz-l5-qhL" firstAttribute="centerX" secondItem="TTr-bX-kWG" secondAttribute="centerX" id="paF-CY-WFr"/>
+                                    <constraint firstAttribute="trailing" secondItem="FGB-qB-Vhg" secondAttribute="trailing" id="xco-fN-bXA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zqN-Cj-AY5" secondAttribute="trailing" constant="64" id="Atb-xK-uy0"/>
                             <constraint firstAttribute="bottom" secondItem="LaV-yI-gEH" secondAttribute="bottom" constant="50" id="IAl-kd-l2w"/>
                             <constraint firstItem="zqN-Cj-AY5" firstAttribute="top" secondItem="8jh-KF-YyC" secondAttribute="top" constant="214" id="Yt7-UH-Xpc"/>
+                            <constraint firstItem="TTr-bX-kWG" firstAttribute="leading" secondItem="8jh-KF-YyC" secondAttribute="leading" id="aa4-GU-p7V"/>
                             <constraint firstItem="LaV-yI-gEH" firstAttribute="leading" secondItem="8jh-KF-YyC" secondAttribute="leading" id="ana-Dz-B9i"/>
+                            <constraint firstAttribute="bottom" secondItem="TTr-bX-kWG" secondAttribute="bottom" id="bs4-Uh-ai9"/>
+                            <constraint firstItem="0tp-02-pv6" firstAttribute="leading" secondItem="TTr-bX-kWG" secondAttribute="trailing" id="jlW-jn-B4d"/>
                             <constraint firstAttribute="trailing" secondItem="LaV-yI-gEH" secondAttribute="trailing" id="pKH-2a-UG1"/>
                             <constraint firstAttribute="bottom" secondItem="0tp-02-pv6" secondAttribute="bottom" id="qEE-Me-gNn"/>
                             <constraint firstAttribute="bottom" secondItem="zqN-Cj-AY5" secondAttribute="bottom" id="uFF-c4-YES"/>
@@ -67,7 +107,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="8jh-KF-YyC" firstAttribute="leading" secondItem="Bjj-b9-qlf" secondAttribute="leading" constant="20" id="8f0-78-MSj"/>
                     <constraint firstAttribute="trailing" secondItem="8jh-KF-YyC" secondAttribute="trailing" constant="20" id="TYv-yM-uGE"/>
@@ -78,12 +118,19 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bubbleView" destination="8jh-KF-YyC" id="UWB-0B-i0M"/>
                 <outlet property="delete" destination="0tp-02-pv6" id="gKX-bK-J5I"/>
+                <outlet property="infoLabel" destination="HEI-b8-D2R" id="H7d-eh-xkN"/>
+                <outlet property="newItem" destination="tr8-Xv-zFj" id="my7-zR-dO9"/>
+                <outlet property="tableView" destination="sKR-rL-DhC" id="dtH-Ac-mC2"/>
             </connections>
             <point key="canvasLocation" x="285" y="324"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Delete.png" width="18" height="24"/>
+        <image name="Comments.png" width="26" height="20"/>
+        <image name="Delete.png" width="18" height="25"/>
+        <image name="Fullscreen.png" width="20" height="21"/>
+        <image name="NewItem.png" width="20" height="20"/>
     </resources>
 </document>

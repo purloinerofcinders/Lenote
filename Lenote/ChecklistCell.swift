@@ -11,11 +11,20 @@ import UIKit
 class ChecklistCell: UITableViewCell {
     var checklist: Checklist?
     
+    @IBOutlet weak var bubbleView: UIView!
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var delete: UIButton!
+    @IBOutlet weak var newItem: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        bubbleView.layer.cornerRadius = 10
+        bubbleView.layer.masksToBounds = true
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
