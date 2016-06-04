@@ -1,5 +1,5 @@
 //
-//  Post+CoreDataProperties.swift
+//  Comment+CoreDataProperties.swift
 //  Lenote
 //
 //  Created by Wallace Toh on 4/6/16.
@@ -12,13 +12,8 @@
 import Foundation
 import CoreData
 
-extension Post {
+extension Comment {
 
-    @NSManaged var createdDate: NSDate?
-    @NSManaged var type: NSNumber?
-    @NSManaged var checklist: Checklist?
-    @NSManaged var entry: Entry?
-    @NSManaged var note: Note?
-    @NSManaged var comments: NSSet?
+    @NSManaged var post: Post?
 
 }

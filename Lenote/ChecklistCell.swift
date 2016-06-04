@@ -15,10 +15,7 @@ class ChecklistCell: UITableViewCell {
     
     @IBOutlet weak var infoLabel: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var delete: UIButton!
-    @IBOutlet weak var newItem: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

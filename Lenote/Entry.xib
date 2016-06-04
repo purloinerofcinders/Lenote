@@ -132,7 +132,7 @@
                 <outlet property="infoLabel" destination="UtV-rc-NvY" id="CdK-Aj-xH8"/>
                 <outlet property="titleTextfield" destination="Tbf-0U-neb" id="Kry-dB-lFa"/>
             </connections>
-            <point key="canvasLocation" x="373" y="669"/>
+            <point key="canvasLocation" x="418" y="691"/>
         </tableViewCell>
     </objects>
     <resources>

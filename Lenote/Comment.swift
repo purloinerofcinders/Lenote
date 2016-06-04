@@ -1,5 +1,5 @@
 //
-//  Entry.swift
+//  Comment.swift
 //  Lenote
 //
 //  Created by Wallace Toh on 4/6/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Entry: NSManagedObject {
+class Comment: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

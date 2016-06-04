@@ -15,7 +15,9 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
     
     @IBOutlet weak var noticeLabel: UILabel!
     
-    @IBOutlet weak var dismissKeyboardButton: UIBarButtonItem!
+    @IBOutlet weak var dismissKeyboardButton: UIButton!
+    
+    @IBOutlet weak var dkbBtmConstraint: NSLayoutConstraint!
     
     let notesManager = NotesManager()
     let dateManager = DateManager()
@@ -35,13 +37,21 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
         
         posts = notesManager.fetchPostsSortedByCreatedDateFromNote(note!) as! [AnyObject]
         
-        dismissKeyboardButton.enabled = false
-        
         if posts.count == 0 {
             noticeLabel.hidden = false
         } else {
             noticeLabel.hidden = true
         }
+        
+        dismissKeyboardButton.layer.shadowOffset = CGSizeMake(0.0, 1.0);
+        dismissKeyboardButton.layer.shadowColor = UIColor.init(white: 0, alpha: 1).CGColor
+        dismissKeyboardButton.layer.shadowOpacity = 0.1;
+        dismissKeyboardButton.layer.shadowRadius = 1.0;
+        dismissKeyboardButton.layer.borderColor = UIColor.init(white: 0, alpha: 0.1).CGColor
+        dismissKeyboardButton.layer.borderWidth = 0.5;
+        dismissKeyboardButton.addTarget(self, action: #selector(NoteVC.pressDismissKeyboard(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        dismissKeyboardButton.alpha = 0
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -67,75 +77,70 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
     
     //MARK: - Tableview
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if tableView.tag == -1 {
-            let post = posts[indexPath.row] as? Post
+        let post = posts[indexPath.row] as? Post
 
-            switch (post?.type)! {
-            case 0:
-                let cell = tableView.dequeueReusableCellWithIdentifier("EntryCell") as! EntryCell
-                
-                cell.entry = post?.entry
-                cell.titleTextfield.text = cell.entry?.title
-                cell.contentTextview.text = cell.entry?.content
-                cell.infoLabel.text = dateManager.dateToString(post!.createdDate!, type: 1)
-                
-                cell.titleTextfield.addTarget(self, action: #selector(NoteVC.entryTextFieldDidChange(_:)), forControlEvents: UIControlEvents.EditingChanged)
-                cell.titleTextfield.delegate = self
-                cell.contentTextview.delegate = self
-                cell.titleTextfield.tag = indexPath.row
-                cell.contentTextview.tag = indexPath.row
-                
-                cell.delete.tag = 0
-                cell.delete.addTarget(self, action: #selector(NoteVC.pressDelete(_:)), forControlEvents: .TouchUpInside)
-                
-                return cell
-                
-            case 1:
-                let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistCell") as! ChecklistCell
-                
-                cell.checklist = post?.checklist
-                cell.tableView.delegate = self
-                cell.tableView.dataSource = self
-                cell.tableView.tag = indexPath.row //location of Checklist in main tableview
-                cell.tableView.registerNib(UINib(nibName: "ChecklistItem", bundle: nil), forCellReuseIdentifier: "ChecklistItemCell")
-                
-                cell.delete.tag = 1
-                cell.delete.addTarget(self, action: #selector(NoteVC.pressDelete(_:)), forControlEvents: .TouchUpInside)
-                cell.newItem.addTarget(self, action: #selector(NoteVC.pressNewItem(_:)), forControlEvents: .TouchUpInside)
-                
-                return cell
-                
-            default:
-                let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("LEL")! //find a way to init an empty cell
-                
-                return cell
-            }
-        } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistItemCell") as! ChecklistItemCell
+        switch (post?.type)! {
+        case 0:
+            let cell = tableView.dequeueReusableCellWithIdentifier("EntryCell") as! EntryCell
             
+            cell.entry = post?.entry
+            cell.titleTextfield.text = cell.entry?.title
+            cell.contentTextview.text = cell.entry?.content
+            cell.infoLabel.text = dateManager.dateToString(post!.createdDate!, type: 1)
+            
+            cell.titleTextfield.addTarget(self, action: #selector(NoteVC.entryTextFieldDidChange(_:)), forControlEvents: UIControlEvents.EditingChanged)
             cell.titleTextfield.delegate = self
+            cell.contentTextview.delegate = self
             cell.titleTextfield.tag = indexPath.row
-            cell.titleTextfield.addTarget(self, action: #selector(NoteVC.itemTextFieldDidChange(_:)), forControlEvents: .EditingChanged)
+            cell.contentTextview.tag = indexPath.row
             
-            let post = posts[tableView.tag]
-            let checklist = post.checklist!
-            let checklistItem = notesManager.fetchItemsInChecklist(checklist!)[indexPath.row]
+            cell.delete.tag = 0
+            cell.delete.addTarget(self, action: #selector(NoteVC.pressDelete(_:)), forControlEvents: .TouchUpInside)
             
-            cell.titleTextfield.text = checklistItem.title
+            cell.selectionStyle = .None
+            
+            return cell
+            
+        case 1:
+            let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistCell") as! ChecklistCell
+            
+            cell.checklist = post?.checklist
+            
+            cell.delete.tag = 1
+            cell.delete.addTarget(self, action: #selector(NoteVC.pressDelete(_:)), forControlEvents: .TouchUpInside)
+            
+            cell.selectionStyle = .None
+            
+            return cell
+            
+        default:
+            let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("LEL")! //find a way to init an empty cell
             
             return cell
         }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView.tag == -1 {
-            return posts.count
-        } else {
-            let post = posts[tableView.tag] as! Post
-            let checklist = post.checklist!
+        return posts.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let post = posts[indexPath.row] as! Post
+        
+        switch post.type as! Int {
+        case 0:
+            return 320
             
-            return (checklist.items?.count)!
+        case 1:
+            return 183
+            
+        default:
+            return 320
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.view.endEditing(true)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -146,19 +151,6 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
     func entryTextFieldDidChange(textField: UITextField) {
         let entry: Entry = (posts[textField.tag] as! Post).entry!
         entry.title = textField.text
-    }
-    
-    func itemTextFieldDidChange(textField: UITextField) {
-        let view = textField.superview?.superview?.superview?.superview?.superview //Bubbleview containing the textfield, ugly but gets the work done!! :D
-        
-        let point = view?.convertPoint(CGPointZero, toView: tableView)
-        let indexPath = tableView.indexPathForRowAtPoint(point!)
-        
-        let post = posts[indexPath!.row] as! Post
-        let checklist = post.checklist
-        let checklistItem = notesManager.fetchItemsInChecklist(checklist!)[textField.tag] as! ChecklistItem
-        
-        notesManager.updateItemTitle(checklistItem, title: textField.text!)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -178,11 +170,21 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
     
     //MARK: - Keyboard
     func keyboardWillAppear(notification: NSNotification) {
-        dismissKeyboardButton.enabled = true
+        var info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        
+        self.dkbBtmConstraint.constant = keyboardFrame.size.height + 20
+        
+        UIView.animateWithDuration(0.5) {
+            self.dismissKeyboardButton.alpha = 1
+            self.view.layoutIfNeeded()
+        }
     }
     
     func keyboardWillDisappear(notification: NSNotification) {
-        dismissKeyboardButton.enabled = false
+        UIView.animateWithDuration(0.5) {
+            self.dismissKeyboardButton.alpha = 0
+        }
     }
     
     //MARK: - Button Events
@@ -202,7 +204,7 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
         tableView.reloadData()
     }
     
-    @IBAction func pressDismissKeyboard(sender: AnyObject) {
+    func pressDismissKeyboard(sender: AnyObject) {
         view.endEditing(true)
     }
     
@@ -225,20 +227,6 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
             }).show()
         
         tableView.reloadData()
-    }
-    
-    func pressNewItem(sender: UIButton) {
-        let point: CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
-        let indexPath: NSIndexPath = self.tableView.indexPathForRowAtPoint(point)!
-        
-        let post = posts[indexPath.row] as! Post
-        let checklist = post.checklist
-        
-        notesManager.createItemInChecklist(checklist!)
-        
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! ChecklistCell
-        
-        cell.tableView.reloadData()
     }
     
     //MARK: - Custom

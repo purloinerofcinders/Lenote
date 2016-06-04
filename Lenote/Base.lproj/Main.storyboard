@@ -108,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" tag="-1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-fL-biU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-fL-biU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -126,6 +126,15 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7X-eK-yYV">
+                                <rect key="frame" x="258" y="225" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="VUU-O6-cDJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="ni0-vb-PNC"/>
+                                </constraints>
+                                <state key="normal" image="ArrowDown.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -134,41 +143,84 @@
                             <constraint firstItem="G1p-3Y-yVl" firstAttribute="centerX" secondItem="41L-Nm-RqR" secondAttribute="centerX" id="QtF-ws-O0q"/>
                             <constraint firstItem="G1p-3Y-yVl" firstAttribute="centerY" secondItem="41L-Nm-RqR" secondAttribute="centerY" id="UhZ-Qf-HHh"/>
                             <constraint firstItem="a5b-fL-biU" firstAttribute="leading" secondItem="41L-Nm-RqR" secondAttribute="leading" id="V3f-CC-4dQ"/>
+                            <constraint firstAttribute="trailing" secondItem="N7X-eK-yYV" secondAttribute="trailing" constant="12" id="b8I-OA-WtV"/>
                             <constraint firstItem="a5b-fL-biU" firstAttribute="top" secondItem="41L-Nm-RqR" secondAttribute="top" id="iYq-Ph-hSf"/>
+                            <constraint firstItem="q5o-Bi-TwC" firstAttribute="top" secondItem="N7X-eK-yYV" secondAttribute="bottom" constant="225" id="vme-v2-l5t"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ui3-WF-1HX">
                         <rightBarButtonItems>
-                            <barButtonItem image="NewNote.png" id="fDk-kA-xZx">
+                            <barButtonItem image="NewItem.png" id="fDk-kA-xZx">
                                 <connections>
                                     <action selector="pressNew:" destination="2ym-Nw-AAW" id="GbP-WE-al1"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="Settings.png" id="SHl-Q6-Huk"/>
-                            <barButtonItem image="DismissKeyboard.png" id="q52-5x-wZ9">
-                                <connections>
-                                    <action selector="pressDismissKeyboard:" destination="2ym-Nw-AAW" id="ajw-KU-pwZ"/>
-                                </connections>
-                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="500"/>
                     <connections>
-                        <outlet property="dismissKeyboardButton" destination="q52-5x-wZ9" id="1A8-NX-foQ"/>
+                        <outlet property="dismissKeyboardButton" destination="N7X-eK-yYV" id="6aY-sc-fxf"/>
+                        <outlet property="dkbBtmConstraint" destination="vme-v2-l5t" id="emd-M7-STm"/>
                         <outlet property="noticeLabel" destination="G1p-3Y-yVl" id="1d6-GD-qLC"/>
                         <outlet property="tableView" destination="a5b-fL-biU" id="8kJ-s2-QWi"/>
+                        <segue destination="Ste-7J-AgA" kind="show" identifier="Checklist" id="4Ic-h3-o49"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1k-Bk-DJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1474" y="393"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="ZTz-c1-bmT">
+            <objects>
+                <viewController id="Ste-7J-AgA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BsV-7i-fRH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ehr-eH-0sw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jp3-So-b97">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c8N-lB-eIC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aPR-pG-stI">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aPR-pG-stI" id="b8F-r6-Pdf">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c8N-lB-eIC" firstAttribute="leading" secondItem="Jp3-So-b97" secondAttribute="leading" id="VWK-ug-IkY"/>
+                            <constraint firstItem="Ehr-eH-0sw" firstAttribute="top" secondItem="c8N-lB-eIC" secondAttribute="bottom" id="eFX-Dd-hXx"/>
+                            <constraint firstItem="c8N-lB-eIC" firstAttribute="top" secondItem="Jp3-So-b97" secondAttribute="top" id="k9K-av-dto"/>
+                            <constraint firstAttribute="trailing" secondItem="c8N-lB-eIC" secondAttribute="trailing" id="wUE-XR-x4r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="mt1-8L-rxH">
+                        <barButtonItem key="rightBarButtonItem" image="NewItem.png" id="1av-xS-HoG"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uCq-7x-Lme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="393"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="DismissKeyboard.png" width="24" height="20"/>
+        <image name="ArrowDown.png" width="28" height="15"/>
         <image name="NewItem.png" width="20" height="20"/>
-        <image name="NewNote.png" width="22" height="22"/>
         <image name="Settings.png" width="20" height="22"/>
     </resources>
 </document>
