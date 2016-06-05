@@ -15,9 +15,7 @@ class MainTVC: UITableViewController, UISearchBarDelegate {
     let notesManager = NotesManager()
     
     var notes = [AnyObject]()
-    var note: Note?
-    
-    var shouldBringUpKeyboard: Bool?
+    var noteToPass: Note?
     
     //MARK: - View
     override func viewDidLoad() {
@@ -74,9 +72,7 @@ class MainTVC: UITableViewController, UISearchBarDelegate {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! NoteCell
-        note = cell.note
-        
-        shouldBringUpKeyboard = false
+        noteToPass = cell.note
         
         performSegueWithIdentifier("Note", sender: self)
     }
@@ -111,8 +107,7 @@ class MainTVC: UITableViewController, UISearchBarDelegate {
         Alert(title: "New Note", message: "Enter a name for this note.")
             .addAction("Cancel")
             .addAction("Save", style: .Default, handler: { _ in
-                self.note = self.notesManager.createNoteWithTitle(textField.text!)
-                self.shouldBringUpKeyboard = true
+                self.noteToPass = self.notesManager.createNoteWithTitle(textField.text!)
                 
                 self.notes = self.notesManager.fetchNotes() as! [AnyObject]
                 
@@ -128,8 +123,7 @@ class MainTVC: UITableViewController, UISearchBarDelegate {
         if segue.identifier == "Note" {
             let destVC = segue.destinationViewController as! NoteVC
             
-            destVC.shouldBringUpKeyboard = shouldBringUpKeyboard
-            destVC.note = note
+            destVC.note = noteToPass
         }
     }
     

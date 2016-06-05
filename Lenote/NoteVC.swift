@@ -26,7 +26,7 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
     
     var posts = [AnyObject]()
     
-    var shouldBringUpKeyboard: Bool?
+    var checklistToPass: Checklist!
     
     //MARK: - View
     override func viewDidLoad() {
@@ -43,15 +43,7 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
             noticeLabel.hidden = true
         }
         
-        dismissKeyboardButton.layer.shadowOffset = CGSizeMake(0.0, 1.0);
-        dismissKeyboardButton.layer.shadowColor = UIColor.init(white: 0, alpha: 1).CGColor
-        dismissKeyboardButton.layer.shadowOpacity = 0.1;
-        dismissKeyboardButton.layer.shadowRadius = 1.0;
-        dismissKeyboardButton.layer.borderColor = UIColor.init(white: 0, alpha: 0.1).CGColor
-        dismissKeyboardButton.layer.borderWidth = 0.5;
-        dismissKeyboardButton.addTarget(self, action: #selector(NoteVC.pressDismissKeyboard(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        dismissKeyboardButton.alpha = 0
+        setUpDismissKeyboard()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -72,6 +64,8 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
         NSNotificationCenter.defaultCenter().removeObserver(self)
         
         notesManager.saveContext()
+        
+        self.view.endEditing(true)
     }
     
     
@@ -88,7 +82,7 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
             cell.contentTextview.text = cell.entry?.content
             cell.infoLabel.text = dateManager.dateToString(post!.createdDate!, type: 1)
             
-            cell.titleTextfield.addTarget(self, action: #selector(NoteVC.entryTextFieldDidChange(_:)), forControlEvents: UIControlEvents.EditingChanged)
+            cell.titleTextfield.addTarget(self, action: #selector(NoteVC.entryTextFieldDidChange(_:)), forControlEvents: .EditingChanged)
             cell.titleTextfield.delegate = self
             cell.contentTextview.delegate = self
             cell.titleTextfield.tag = indexPath.row
@@ -108,6 +102,11 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
             
             cell.delete.tag = 1
             cell.delete.addTarget(self, action: #selector(NoteVC.pressDelete(_:)), forControlEvents: .TouchUpInside)
+            cell.fullScreen.addTarget(self, action: #selector(NoteVC.pressFullScreen(_:)), forControlEvents: .TouchUpInside)
+            
+            cell.titleTextfield.delegate = self
+            cell.titleTextfield.addTarget(self, action: #selector(NoteVC.checklistTextfieldDidChange(_:)), forControlEvents: .EditingChanged)
+            cell.titleTextfield.text = cell.checklist?.title
             
             cell.selectionStyle = .None
             
@@ -150,7 +149,14 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
     //MARK: - Textfield
     func entryTextFieldDidChange(textField: UITextField) {
         let entry: Entry = (posts[textField.tag] as! Post).entry!
-        entry.title = textField.text
+        
+        notesManager.updateEntryTitle(entry, title: textField.text!)
+    }
+    
+    func checklistTextfieldDidChange(textField: UITextField) {
+        let checklist: Checklist = (posts[textField.tag] as! Post).checklist!
+
+        notesManager.updateChecklistTitle(checklist, title: textField.text!)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -165,7 +171,8 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
     //MARK: - Textview
     func textViewDidChange(textView: UITextView) {
         let entry: Entry = (posts[textView.tag] as! Post).entry!
-        entry.content = textView.text
+        
+        notesManager.updateEntryContent(entry, content: textView.text)
     }
     
     //MARK: - Keyboard
@@ -229,6 +236,25 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
         tableView.reloadData()
     }
     
+    func pressFullScreen(sender: UIButton) {
+        let point: CGPoint = sender.convertPoint(CGPointZero, toView: tableView)
+        let indexPath: NSIndexPath = self.tableView.indexPathForRowAtPoint(point)!
+        
+        let post = posts[indexPath.row] as! Post
+        checklistToPass = post.checklist
+        
+        performSegueWithIdentifier("Checklist", sender: self)
+    }
+    
+    //MARK: - Segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Checklist" {
+            let destVC = segue.destinationViewController as! ChecklistVC
+            
+            destVC.checklist = checklistToPass
+        }
+    }
+    
     //MARK: - Custom
     func createPostWithType(type: NSInteger) {
         self.notesManager.createPostInNote(self.note!, type: type)
@@ -239,6 +265,18 @@ class NoteVC: UIViewController, UITextFieldDelegate, UITextViewDelegate, UITable
         if self.noticeLabel.hidden == false {
             self.noticeLabel.hidden = true
         }
+    }
+    
+    func setUpDismissKeyboard() {
+        dismissKeyboardButton.layer.shadowOffset = CGSizeMake(0.0, 1.0);
+        dismissKeyboardButton.layer.shadowColor = UIColor.init(white: 0, alpha: 1).CGColor
+        dismissKeyboardButton.layer.shadowOpacity = 0.1;
+        dismissKeyboardButton.layer.shadowRadius = 1.0;
+        dismissKeyboardButton.layer.borderColor = UIColor.init(white: 0, alpha: 0.1).CGColor
+        dismissKeyboardButton.layer.borderWidth = 0.5;
+        dismissKeyboardButton.addTarget(self, action: #selector(NoteVC.pressDismissKeyboard(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        dismissKeyboardButton.alpha = 0
     }
     
     //MARK: - Debugging

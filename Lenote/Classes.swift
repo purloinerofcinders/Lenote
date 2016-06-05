@@ -65,10 +65,21 @@ class NotesManager {
         
         for post in note.posts! {
             let postObject: NSManagedObject = post as! NSManagedObject
-            let entryObject: NSManagedObject = (post as! Post).entry! as NSManagedObject
+            
+            switch (post as! Post).type as! Int {
+            case 0:
+                let entryObject: NSManagedObject = (post as! Post).entry! as NSManagedObject
+                
+                managedContext.deleteObject(entryObject)
+            case 1:
+                let checklistObject: NSManagedObject = (post as! Post).checklist! as NSManagedObject
+                
+                managedContext.deleteObject(checklistObject)
+            default:
+                break
+            }
             
             managedContext.deleteObject(postObject)
-            managedContext.deleteObject(entryObject)
         }
         
         managedContext.deleteObject(noteObject)
@@ -168,7 +179,20 @@ class NotesManager {
         saveContext()
     }
     
+    //MARK: - Entry Setters
+    func updateEntryTitle(entry: Entry, title: String) {
+        entry.title = title
+    }
+    
+    func updateEntryContent(entry: Entry, content: String) {
+        entry.content = content
+    }
+    
     //MARK: - Checklist Setters
+    func updateChecklistTitle(checklist: Checklist, title: String) {
+        checklist.title = title
+    }
+    
     func createItemInChecklist(checklist: Checklist) {
         let item = NSEntityDescription.insertNewObjectForEntityForName("ChecklistItem", inManagedObjectContext:managedContext) as! ChecklistItem
         

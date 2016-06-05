@@ -19,6 +19,8 @@
 		BA4475FD1D01C1E800CA0EBD /* Comments.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475FA1D01C1E800CA0EBD /* Comments.png */; };
 		BA4475FE1D01C1E800CA0EBD /* Comments@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475FB1D01C1E800CA0EBD /* Comments@2x.png */; };
 		BA4475FF1D01C1E800CA0EBD /* Comments@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA4475FC1D01C1E800CA0EBD /* Comments@3x.png */; };
+		BA45D5611D040FCA00B1BCDF /* ChecklistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA45D5601D040FC900B1BCDF /* ChecklistVC.swift */; };
+		BA45D5631D0410E300B1BCDF /* ChecklistItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA45D5621D0410E300B1BCDF /* ChecklistItemCell.swift */; };
 		BA4B2D7A1D030E7C004A6D7E /* Checklist+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B2D6E1D030E7C004A6D7E /* Checklist+CoreDataProperties.swift */; };
 		BA4B2D7B1D030E7C004A6D7E /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B2D6F1D030E7C004A6D7E /* Checklist.swift */; };
 		BA4B2D7C1D030E7C004A6D7E /* ChecklistItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B2D701D030E7C004A6D7E /* ChecklistItem+CoreDataProperties.swift */; };
@@ -93,6 +95,8 @@
 		BA4475FA1D01C1E800CA0EBD /* Comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Comments.png; path = Resources/Comments.png; sourceTree = "<group>"; };
 		BA4475FB1D01C1E800CA0EBD /* Comments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Comments@2x.png"; path = "Resources/Comments@2x.png"; sourceTree = "<group>"; };
 		BA4475FC1D01C1E800CA0EBD /* Comments@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Comments@3x.png"; path = "Resources/Comments@3x.png"; sourceTree = "<group>"; };
+		BA45D5601D040FC900B1BCDF /* ChecklistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistVC.swift; sourceTree = "<group>"; };
+		BA45D5621D0410E300B1BCDF /* ChecklistItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItemCell.swift; sourceTree = "<group>"; };
 		BA4B2D6E1D030E7C004A6D7E /* Checklist+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Checklist+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA4B2D6F1D030E7C004A6D7E /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		BA4B2D701D030E7C004A6D7E /* ChecklistItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChecklistItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 			children = (
 				BAFEB7ED1CA608F900B394EF /* MainTVC.swift */,
 				BAFA05F71CA87C9300B0005F /* NoteVC.swift */,
+				BA45D5601D040FC900B1BCDF /* ChecklistVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				BA83AEF51CF86D75009135F9 /* Entry.xib */,
 				BAFD2BE31CF9E5010097BB75 /* ChecklistCell.swift */,
 				BAFD2BE51CF9E5370097BB75 /* Checklist.xib */,
+				BA45D5621D0410E300B1BCDF /* ChecklistItemCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -535,9 +541,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4B2D7B1D030E7C004A6D7E /* Checklist.swift in Sources */,
+				BA45D5611D040FCA00B1BCDF /* ChecklistVC.swift in Sources */,
 				BA4B2D7C1D030E7C004A6D7E /* ChecklistItem+CoreDataProperties.swift in Sources */,
 				BAFEB7F11CA60CAC00B394EF /* NoteCell.swift in Sources */,
 				BA4B2D7E1D030E7C004A6D7E /* Note+CoreDataProperties.swift in Sources */,
+				BA45D5631D0410E300B1BCDF /* ChecklistItemCell.swift in Sources */,
 				BAFA05F81CA87C9300B0005F /* NoteVC.swift in Sources */,
 				BA4B2D821D030E7C004A6D7E /* Post+CoreDataProperties.swift in Sources */,
 				BAFF99511CA1618200FD12F7 /* AppDelegate.swift in Sources */,

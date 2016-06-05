@@ -9,13 +9,16 @@
 import UIKit
 
 class ChecklistCell: UITableViewCell {
-    var checklist: Checklist?
-    
     @IBOutlet weak var bubbleView: UIView!
     
     @IBOutlet weak var infoLabel: UILabel!
     
     @IBOutlet weak var delete: UIButton!
+    @IBOutlet weak var fullScreen: UIButton!
+    
+    @IBOutlet weak var titleTextfield: UITextField!
+    
+    var checklist: Checklist?
     
     override func awakeFromNib() {
         super.awakeFromNib()
